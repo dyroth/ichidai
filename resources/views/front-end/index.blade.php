@@ -1,4 +1,4 @@
-@extends('../_partials/master')
+@extends('front-end/_partials/master')
 
 @section('content')
 <div class="slide-one-item home-slider owl-carousel">
