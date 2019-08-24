@@ -163,7 +163,6 @@
                                 <a href="#" class="p-2"><span class="icon-twitter"></span></a>
                                 <a href="#" class="p-2"><span class="icon-instagram"></span></a>
                                 <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
-
                             </p>
                         </div>
                     </div>
