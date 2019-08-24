@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
 
 </head>
 <body>
@@ -51,14 +51,14 @@
                     </div>
                     <div class="col-6">
                         <div class="d-flex ml-auto">
-                            <a href="#" class="d-flex align-items-center ml-auto mr-4">
+                            <span class="d-flex align-items-center ml-auto mr-4" style="color: #fff">
                                 <span class="icon-envelope mr-2"></span>
                                 <span class="d-none d-md-inline-block">info@ichidai.be</span>
-                            </a>
-                            <a href="tel://12912830302" class="d-flex align-items-center">
+                            </span>
+                            <span class="d-flex align-items-center" style="color: #fff">
                                 <span class="icon-phone mr-2"></span>
                                 <span class="d-none d-md-inline-block">+32 496 10 60 90</span>
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -15,51 +15,51 @@
     </div>
 </div>
 
-<div class="border-bottom">
-    <div class="row no-gutters">
-        <div class="col-md-6 col-lg-3">
-            <div class="w-100 h-100 block-feature p-5 bg-light">
-            <span class="d-block mb-3">
-              <span class="flaticon-padmasana display-4"></span>
-            </span>
-                <h2>Yoga</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit
-                    est.</p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="w-100 h-100 block-feature p-5">
-            <span class="d-block mb-3">
-              <span class="flaticon-weight display-4"></span>
-            </span>
-                <h2>Weight Lifting</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit
-                    est.</p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="w-100 h-100 block-feature p-5 bg-light">
-            <span class="d-block mb-3">
-              <span class="flaticon-boxing-gloves display-4"></span>
-            </span>
+{{--<div class="border-bottom">--}}
+    {{--<div class="row no-gutters">--}}
+        {{--<div class="col-md-6 col-lg-3">--}}
+            {{--<div class="w-100 h-100 block-feature p-5 bg-light">--}}
+            {{--<span class="d-block mb-3">--}}
+              {{--<span class="flaticon-padmasana display-4"></span>--}}
+            {{--</span>--}}
+                {{--<h2>Yoga</h2>--}}
+                {{--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit--}}
+                    {{--est.</p>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="col-md-6 col-lg-3">--}}
+            {{--<div class="w-100 h-100 block-feature p-5">--}}
+            {{--<span class="d-block mb-3">--}}
+              {{--<span class="flaticon-weight display-4"></span>--}}
+            {{--</span>--}}
+                {{--<h2>Weight Lifting</h2>--}}
+                {{--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit--}}
+                    {{--est.</p>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="col-md-6 col-lg-3">--}}
+            {{--<div class="w-100 h-100 block-feature p-5 bg-light">--}}
+            {{--<span class="d-block mb-3">--}}
+              {{--<span class="flaticon-boxing-gloves display-4"></span>--}}
+            {{--</span>--}}
 
-                <h2>Boxing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit
-                    est.</p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="w-100 h-100 block-feature p-5">
-            <span class="d-block mb-3">
-              <span class="flaticon-running display-4"></span>
-            </span>
-                <h2>Running</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit
-                    est.</p>
-            </div>
-        </div>
-    </div>
-</div> <!-- .block-feature -->
+                {{--<h2>Boxing</h2>--}}
+                {{--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit--}}
+                    {{--est.</p>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="col-md-6 col-lg-3">--}}
+            {{--<div class="w-100 h-100 block-feature p-5">--}}
+            {{--<span class="d-block mb-3">--}}
+              {{--<span class="flaticon-running display-4"></span>--}}
+            {{--</span>--}}
+                {{--<h2>Running</h2>--}}
+                {{--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat iure eveniet perferendis odit--}}
+                    {{--est.</p>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div> <!-- .block-feature -->--}}
 
 <div class="site-section">
     <div class="container">
@@ -388,7 +388,7 @@
     <div class="container">
 
         <div class="heading-with-border text-center mb-5">
-            <h2 class="heading text-uppercase">Experts Trainer</h2>
+            <h2 class="heading text-uppercase">Trainers</h2>
         </div>
 
         <div class="row">
