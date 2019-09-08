@@ -65,20 +65,19 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 col-lg-5 mb-5 mb-lg-0">
-                <h2 class="mb-3 text-uppercase">All About <strong class="text-black font-weight-bold">Our Gym</strong>
+                <h2 class="mb-3 text-uppercase">Alles over <strong class="text-black font-weight-bold">Ichi Dai</strong>
                 </h2>
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusamus, rerum illo
                     facilis reiciendis.</p>
                 <p class="mb-4">Iste aut dolorem veritatis saepe nesciunt distinctio voluptas sapiente sunt perspiciatis
                     autem minima, iure provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
                     quas.</p>
-                <ul class="site-block-check">
+                <ul>
                     <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
                     <li>Nemo, voluptate? Voluptates odit, aperiam nostrum! Ipsa.</li>
                     <li>Itaque voluptatum ducimus aliquam, est fuga molestiae?</li>
                     <li>Accusamus porro at commodi delectus, nesciunt molestiae.</li>
                 </ul>
-                <p><a href="#" class="btn btn-primary pill px-4">Read More</a></p>
             </div>
             <div class="col-md-12 col-lg-6 ml-auto">
                 <img src="images/about.jpg" alt="Image" class="img-fluid">
@@ -91,7 +90,7 @@
     <div class="container">
 
         <div class="heading-with-border">
-            <h2 class="heading text-uppercase">Featured Class</h2>
+            <h2 class="heading text-uppercase">Lessen</h2>
         </div>
 
         <div class="nonloop-block-13 owl-carousel">
@@ -99,11 +98,11 @@
             <div class="block-media-1 heading-with-border bg-white">
                 <img src="images/img_1.jpg" alt="Image" class="img-fluid">
                 <div class="p-4">
-                    <h3 class="h5 heading">Yoga</h3>
+                    <h3 class="h5 heading">Kata</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
                     <span class="d-flex align-items-center">
                 <span class="icon-person h4 mr-3"></span>
-                <span>Bruce Mars, David Holmes</span>
+                <span>Reginald, Sebastien, Céline</span>
               </span>
                 </div>
             </div>
@@ -111,11 +110,11 @@
             <div class="block-media-1 heading-with-border bg-white">
                 <img src="images/img_2.jpg" alt="Image" class="img-fluid">
                 <div class="p-4">
-                    <h3 class="h5 heading">Running</h3>
+                    <h3 class="h5 heading">Kumite</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
                     <span class="d-flex align-items-center">
                 <span class="icon-person h4 mr-3"></span>
-                <span>Bruce Mars, David Holmes</span>
+                <span>Sebastien</span>
               </span>
                 </div>
             </div>
@@ -123,23 +122,11 @@
             <div class="block-media-1 heading-with-border bg-white">
                 <img src="images/img_1.jpg" alt="Image" class="img-fluid">
                 <div class="p-4">
-                    <h3 class="h5 heading">Yoga</h3>
+                    <h3 class="h5 heading">Kids</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
                     <span class="d-flex align-items-center">
                 <span class="icon-person h4 mr-3"></span>
-                <span>Bruce Mars, David Holmes</span>
-              </span>
-                </div>
-            </div>
-
-            <div class="block-media-1 heading-with-border bg-white">
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-                <div class="p-4">
-                    <h3 class="h5 heading">Running</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
-                    <span class="d-flex align-items-center">
-                <span class="icon-person h4 mr-3"></span>
-                <span>Bruce Mars, David Holmes</span>
+                <span>Sebastien, Céline</span>
               </span>
                 </div>
             </div>
@@ -149,10 +136,10 @@
     </div>
 </div>
 
-<div class="block-schedule overlay site-section" style="background-image: url('images/hero_bg_1.jpg');">
+<div class="block-schedule overlay site-section" style="background-image: url('images/gi.jpg');">
     <div class="container">
 
-        <h2 class="text-white display-4 mb-5">Schedule</h2>
+        <h2 class="text-white display-4 mb-5">Lesuren</h2>
 
         <ul class="nav nav-pills tab-nav mb-4" id="pills-tab" role="tablist">
             <li class="nav-item">
@@ -321,66 +308,66 @@
     </div>
 </div>
 
-<div class="site-section block-14">
+{{--<div class="site-section block-14">--}}
 
-    <div class="container">
+{{--    <div class="container">--}}
 
-        <div class="heading-with-border text-center">
-            <h2 class="heading text-uppercase">Testimonials</h2>
-        </div>
+{{--        <div class="heading-with-border text-center">--}}
+{{--            <h2 class="heading text-uppercase">Testimonials</h2>--}}
+{{--        </div>--}}
 
-        <div class="nonloop-block-14 owl-carousel">
+{{--        <div class="nonloop-block-14 owl-carousel">--}}
 
-            <div class="d-flex block-testimony">
-                <div class="person mr-3">
-                    <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
-                </div>
-                <div>
-                    <h2 class="h5">Katie Johnson, CEO</h2>
-                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui
-                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;
-                    </blockquote>
-                </div>
-            </div>
-            <div class="d-flex block-testimony">
-                <div class="person mr-3">
-                    <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">
-                </div>
-                <div>
-                    <h2 class="h5">Jane Mars, Designer</h2>
-                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui
-                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;
-                    </blockquote>
-                </div>
-            </div>
-            <div class="d-flex block-testimony">
-                <div class="person mr-3">
-                    <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">
-                </div>
-                <div>
-                    <h2 class="h5">Shane Holmes, CEO</h2>
-                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui
-                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;
-                    </blockquote>
-                </div>
-            </div>
-            <div class="d-flex block-testimony">
-                <div class="person mr-3">
-                    <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle">
-                </div>
-                <div>
-                    <h2 class="h5">Mark Johnson, CEO</h2>
-                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui
-                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;
-                    </blockquote>
-                </div>
-            </div>
+{{--            <div class="d-flex block-testimony">--}}
+{{--                <div class="person mr-3">--}}
+{{--                    <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">--}}
+{{--                </div>--}}
+{{--                <div>--}}
+{{--                    <h2 class="h5">Katie Johnson, CEO</h2>--}}
+{{--                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui--}}
+{{--                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;--}}
+{{--                    </blockquote>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="d-flex block-testimony">--}}
+{{--                <div class="person mr-3">--}}
+{{--                    <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">--}}
+{{--                </div>--}}
+{{--                <div>--}}
+{{--                    <h2 class="h5">Jane Mars, Designer</h2>--}}
+{{--                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui--}}
+{{--                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;--}}
+{{--                    </blockquote>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="d-flex block-testimony">--}}
+{{--                <div class="person mr-3">--}}
+{{--                    <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle">--}}
+{{--                </div>--}}
+{{--                <div>--}}
+{{--                    <h2 class="h5">Shane Holmes, CEO</h2>--}}
+{{--                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui--}}
+{{--                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;--}}
+{{--                    </blockquote>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="d-flex block-testimony">--}}
+{{--                <div class="person mr-3">--}}
+{{--                    <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle">--}}
+{{--                </div>--}}
+{{--                <div>--}}
+{{--                    <h2 class="h5">Mark Johnson, CEO</h2>--}}
+{{--                    <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui--}}
+{{--                        optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!&rdquo;--}}
+{{--                    </blockquote>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
-    </div>
+{{--    </div>--}}
 
-</div>
+{{--</div>--}}
 
 
 <div class="site-section bg-light">
@@ -388,7 +375,7 @@
     <div class="container">
 
         <div class="heading-with-border text-center mb-5">
-            <h2 class="heading text-uppercase">Trainers</h2>
+            <h2 class="heading text-uppercase">Lesgevers</h2>
         </div>
 
         <div class="row">

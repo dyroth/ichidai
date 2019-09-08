@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/front-end/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/front-end/bootstrap-datepicker.css">
     <link rel="stylesheet" href="/css/front-end/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
@@ -123,11 +124,10 @@
                 <div class="col-lg-7">
                     <div class="row">
                         <div class="col-6 col-md-4 col-lg-8 mb-5 mb-lg-0">
-                            <h3 class="footer-heading mb-4 text-primary">About</h3>
+                            <h3 class="footer-heading mb-4 text-primary">Over Ons</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam,
                                 placeat amet sint vel impedit reprehenderit eius expedita nemo consequatur obcaecati
                                 aperiam, blanditiis quia iste in! Assumenda, odio?</p>
-                            <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
                             <h3 class="footer-heading mb-4 text-primary">Quick Menu</h3>
@@ -157,26 +157,25 @@
                     <div class="row">
                         <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Social Icons</h3></div>
                         <div class="col-md-12">
-                            <p>
-                                <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                                <a href="#" class="p-2"><span class="icon-vimeo"></span></a>
+                            <p >
+                                <a href="#" class="pb-2 pr-2 pl-0"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#" class="p-2"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#" class="p-2"><i class="fab fa-instagram"></i></a>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row pt-5 mt-5 text-center">
-                <div class="col-md-12">
-                    <p>
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script>
-                        All Rights Reserved.
-                    </p>
-                </div>
+{{--            <div class="row pt-5 mt-5 text-center">--}}
+{{--                <div class="col-md-12">--}}
+{{--                    <p>--}}
+{{--                        Copyright &copy;--}}
+{{--                        <script>document.write(new Date().getFullYear());</script>--}}
+{{--                        All Rights Reserved.--}}
+{{--                    </p>--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
         </div>
     </footer>
 </div>
