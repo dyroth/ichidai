@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#main-title-container {
+    background-image: url('/img/spring-camp.jpg');
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 850px;
+}
+
+
+
+#main-title {
+    color: #fff;
+    font-size: 5em;
+    margin-top: 35%;
+}

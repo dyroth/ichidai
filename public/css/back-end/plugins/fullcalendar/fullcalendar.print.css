@@ -5,9 +5,9 @@
  */
 
 /*
- * Include this stylesheet on your page to get a more printer-friendly calendar.
- * When including this stylesheet, use the media='print' attribute of the <link> tag.
- * Make sure to include this stylesheet IN ADDITION to the regular fullcalendar.css.
+ * Include this stylesheet.css on your page to get a more printer-friendly calendar.
+ * When including this stylesheet.css, use the media='print' attribute of the <link> tag.
+ * Make sure to include this stylesheet.css IN ADDITION to the regular fullcalendar.css.
  */
 
 .fc {
@@ -59,7 +59,7 @@ tbody,
 /* don't force a min-height on rows (for DayGrid) */
 .fc tbody .fc-row {
 	height: auto !important; /* undo height that JS set in distributeHeight */
-	min-height: 0 !important; /* undo the min-height from each view's specific stylesheet */
+	min-height: 0 !important; /* undo the min-height from each view's specific stylesheet.css */
 }
 
 .fc tbody .fc-row .fc-content-skeleton {
