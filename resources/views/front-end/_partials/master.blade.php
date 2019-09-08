@@ -109,7 +109,7 @@
                 <div class="col-lg-7">
                     <div class="row">
                         <div class="col-6 col-md-4 col-lg-8 mb-5 mb-lg-0">
-                            <h3 class="footer-heading mb-4 text-primary">Over Ons</h3>
+                            <h3 class="footer-heading mb-4 text-primary">Kyokushin Karate</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam,
                                 placeat amet sint vel impedit reprehenderit eius expedita nemo consequatur obcaecati
                                 aperiam, blanditiis quia iste in! Assumenda, odio?</p>
