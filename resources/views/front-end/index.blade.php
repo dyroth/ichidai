@@ -110,33 +110,33 @@
 
                     <div class="row-wrap">
                         <div class="row bg-white p-4 align-items-center">
-                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Algemene Training</h3></div>
-                            <div class="col-sm-3 col-md-3 col-lg-3">
-                                <i class="far fa-clock"></i>
-                                18:00u-19:00u
-                            </div>
-                            <div class="col-sm-3 col-md-3 col-lg-3">
-                                <i class="fas fa-user"></i>
-                                &nbsp;Kinderen: 4-8 jaar
-                            </div>
-                            <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-wrap">
-                        <div class="row bg-white p-4 align-items-center">
-                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Algemene Training</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Groep 3</h3></div>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <i class="far fa-clock"></i>
                                 19:00u-20:00u
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <i class="fas fa-user"></i>
-                                &nbsp;Kinderen: 8-13 jaar
+                                &nbsp;Kinderen: 9-11 jaar
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
+                                Zaal 3e verdieping
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrap">
+                        <div class="row bg-white p-4 align-items-center">
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Groep 4</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="far fa-clock"></i>
+                                19:00u-20:00u
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="fas fa-user"></i>
+                                &nbsp;Kinderen: 12-14 jaar
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
+                                Zaal 1e verdieping
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                                 &nbsp;Volwassenen
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
+                                Zaal 3e verdieping
                             </div>
                         </div>
                     </div>
@@ -162,33 +162,65 @@
 
                     <div class="row-wrap">
                         <div class="row bg-white p-4 align-items-center">
-                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Algemene Training</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Groep 1</h3></div>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <i class="far fa-clock"></i>
                                 18:00u-19:00u
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <i class="fas fa-user"></i>
-                                &nbsp;Kinderen: 4-8 jaar
+                                &nbsp;Kinderen: 4-5 jaar
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
+                                Zaal 2e verdieping
                             </div>
                         </div>
                     </div>
                     <div class="row-wrap">
                         <div class="row bg-white p-4 align-items-center">
-                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Algemene Training</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Groep 2</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="far fa-clock"></i>
+                                18:00u-19:00u
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="fas fa-user"></i>
+                                &nbsp;Kinderen: 6-8 jaar
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
+                                Zaal 3e verdieping
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrap">
+                        <div class="row bg-white p-4 align-items-center">
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Groep 3</h3></div>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <i class="far fa-clock"></i>
                                 19:00u-20:00u
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3">
                                 <i class="fas fa-user"></i>
-                                &nbsp;Kinderen: 8-13 jaar
+                                &nbsp;Kinderen: 9-11 jaar
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
+                                Zaal 3e verdieping
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrap">
+                        <div class="row bg-white p-4 align-items-center">
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Groep 4</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="far fa-clock"></i>
+                                18:00u-19:00u
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="fas fa-user"></i>
+                                &nbsp;Kinderen: 12-14 jaar
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
+                                Zaal 1e verdieping
                             </div>
                         </div>
                     </div>
@@ -204,7 +236,7 @@
                                 &nbsp;Volwassenen
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
+                                Zaal 3e verdieping
                             </div>
                         </div>
                     </div>
@@ -212,6 +244,22 @@
                 </div>
                 <div class="tab-pane fade" id="pills-friday" role="tabpanel" aria-labelledby="pills-friday-tab">
 
+                    <div class="row-wrap">
+                        <div class="row bg-white p-4 align-items-center">
+                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Competitie Groep 2, 3, 4</h3></div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="far fa-clock"></i>
+                                18:00u-17:00u
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <i class="fas fa-user"></i>
+                                &nbsp;Volwassenen
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
+                                Zaal 3e verdieping
+                            </div>
+                        </div>
+                    </div>
                     <div class="row-wrap">
                         <div class="row bg-white p-4 align-items-center">
                             <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Kumite Training</h3></div>
@@ -224,27 +272,10 @@
                                 &nbsp;Volwassenen
                             </div>
                             <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
+                                Zaal 3e verdieping
                             </div>
                         </div>
                     </div>
-                    <div class="row-wrap">
-                        <div class="row bg-white p-4 align-items-center">
-                            <div class="col-sm-3 col-md-3 col-lg-3"><h3 class="h5">Combat Fitness</h3></div>
-                            <div class="col-sm-3 col-md-3 col-lg-3">
-                                <i class="far fa-clock"></i>
-                                19:00u-20:00u
-                            </div>
-                            <div class="col-sm-3 col-md-3 col-lg-3">
-                                <i class="fas fa-user"></i>
-                                &nbsp;Volwassenen
-                            </div>
-                            <div class="col-sm-3 col-md-3 col-lg-3 text-md-right">
-
-                            </div>
-                        </div>
-                    </div>
-
 
                 </div>
             </div>
