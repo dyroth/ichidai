@@ -1,9 +1,15 @@
 <?php
-Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('index');
+Auth::routes([
+    'register' => false,
+    'verify' => false,
+]);
+
+Route::get('/', 'Frontend\HomeController@index')->name('index');
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/admin', 'AdminController@index')->name('admin.index');
+    Route::prefix('admin')->group(function () {
+        Route::get('/', 'Backend\AdminController@index')->name('admin.index');
+        Route::get('/coaches', 'Backend\CoachesController@index')->name('admin.coaches');
+    });
 });
-
