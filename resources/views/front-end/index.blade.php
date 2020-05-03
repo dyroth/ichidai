@@ -295,96 +295,15 @@
                 @foreach($coaches as $coach)
                     <div class="col-lg-4 mb-4">
                         <div class="block-trainer">
-                            <img src="{{ 'storage/upload/coaches/' . $coach->filename }}" alt="Image" class="img-fluid">
+                            <img src="{{ '/storage/upload/coaches/' . $coach->filename }}" alt="Image" class="img-fluid">
                             <div class="block-trainer-overlay">
                                 <h2>{{ $coach->name }}</h2>
                                 <p class="text-white">{{ $coach->bio }}</p>
-                                <p>
-                                    <a href="https://www.facebook.com/ichidaidojo/" class="p-2"><span class="icon-facebook"></span></a>
-                                    <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                    <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                                </p>
+                                <p class="text-white">{{ $coach->grade }}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
-                <div class="col-lg-4 mb-4">
-                    <div class="block-trainer">
-                        <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-                        <div class="block-trainer-overlay">
-                            <h2>Jonah Smith</h2>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas
-                                iste corporis asperiores placeat earum.</p>
-                            <p>
-                                <a href="#" class="p-2"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="block-trainer">
-                        <img src="images/person_4.jpg" alt="Image" class="img-fluid">
-                        <div class="block-trainer-overlay">
-                            <h2>Jonah Smith</h2>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas
-                                iste corporis asperiores placeat earum.</p>
-                            <p>
-                                <a href="#" class="p-2"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="block-trainer">
-                        <img src="images/person_3.jpg" alt="Image" class="img-fluid">
-                        <div class="block-trainer-overlay">
-                            <h2>Jonah Smith</h2>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas
-                                iste corporis asperiores placeat earum.</p>
-                            <p>
-                                <a href="#" class="p-2"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="block-trainer">
-                        <img src="images/person_2.jpg" alt="Image" class="img-fluid">
-                        <div class="block-trainer-overlay">
-                            <h2>Jonah Smith</h2>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas
-                                iste corporis asperiores placeat earum.</p>
-                            <p>
-                                <a href="#" class="p-2"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mb-4">
-                    <div class="block-trainer">
-                        <img src="images/person_1.jpg" alt="Image" class="img-fluid">
-                        <div class="block-trainer-overlay">
-                            <h2>Jonah Smith</h2>
-                            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quas
-                                iste corporis asperiores placeat earum.</p>
-                            <p>
-                                <a href="#" class="p-2"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-2"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
