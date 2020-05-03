@@ -1,6 +1,6 @@
 <ul class="nav metismenu" id="side-menu" style="padding-left:0px;">
     <li {{ $title == 'Lesgevers' ? 'class=active' : '' }}>
-        <a href="{{ route('admin.coaches') }}"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Lesgevers</span></a>
+        <a href="{{ route('admin.coaches.index') }}"><i class="fa fa-graduation-cap"></i> <span class="nav-label">Lesgevers</span></a>
     </li>
 </ul>
 
