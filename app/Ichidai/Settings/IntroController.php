@@ -32,8 +32,6 @@ class IntroController extends Controller
 
     public function update(CreateEditIntro $request)
     {
-
-        dd($request->all());
         $intro = Setting::where(['name' => 'intro'])->first();
 
         $properties = [
