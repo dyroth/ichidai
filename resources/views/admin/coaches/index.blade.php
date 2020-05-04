@@ -1,4 +1,4 @@
-@extends('back-end._partials.main')
+@extends('admin._partials.main')
 
 @section('content')
     <div class="row">

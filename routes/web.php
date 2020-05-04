@@ -1,23 +1,41 @@
 <?php
 
+use App\Ichidai\Admin\AdminController;
+use App\Ichidai\Coaches\CoachesController;
+use App\Ichidai\Frontend\HomeController;
+use App\Ichidai\Lesson\LessonsController;
+use App\Ichidai\Settings\IntroController;
+
 Auth::routes([
     'register' => false,
     'verify' => false,
 ]);
 
-Route::get('/', 'Frontend\HomeController@index')->name('index');
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::prefix('admin')->group(function () {
-        Route::get('/', 'Backend\AdminController@index')->name('admin.index');
+        Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
-        Route::get('/coaches', 'Backend\CoachesController@index')->name('admin.coaches.index');
-        Route::get('/coaches/create', 'Backend\CoachesController@create')->name('admin.coaches.create');
-        Route::post('/coaches/create', 'Backend\CoachesController@write')->name('admin.coaches.write');
-        Route::get('/coaches/edit/{coach}', 'Backend\CoachesController@edit')->name('admin.coaches.edit');
-        Route::post('/coaches/edit/{coach}', 'Backend\CoachesController@update')->name('admin.coaches.update');
-        Route::get('/coaches/delete/{coach}', 'Backend\CoachesController@delete')->name('admin.coaches.delete');
+        Route::get('/settings/intro', [IntroController::class, 'edit'])->name('admin.introduction.edit');
+        Route::post('/settings/intro', [IntroController::class, 'update'])->name('admin.introduction.update');
 
-        Route::get('/lessons', 'Backend\LessonsController@index')->name('admin.lessons.index');
+        Route::prefix('coaches')->group(function () {
+            Route::get('/', [CoachesController::class, 'index'])->name('admin.coaches.index');
+            Route::get('/create', [CoachesController::class, 'create'])->name('admin.coaches.create');
+            Route::post('/create', [CoachesController::class, 'write'])->name('admin.coaches.write');
+            Route::get('/edit/{coach}', [CoachesController::class, 'edit'])->name('admin.coaches.edit');
+            Route::post('/edit/{coach}', [CoachesController::class, 'update'])->name('admin.coaches.update');
+            Route::get('/delete/{coach}', [CoachesController::class, 'delete'])->name('admin.coaches.delete');
+        });
+
+        Route::prefix('lessons')->group(function () {
+            Route::get('/', [LessonsController::class, 'index'])->name('admin.lessons.index');
+            Route::get('/create', [LessonsController::class, 'create'])->name('admin.lessons.create');
+            Route::post('/create', [LessonsController::class, 'write'])->name('admin.lessons.write');
+            Route::get('/edit/{lesson}', [LessonsController::class, 'edit'])->name('admin.lessons.edit');
+            Route::post('/edit/{lesson}', [LessonsController::class, 'update'])->name('admin.lessons.update');
+            Route::get('/delete/{lesson}', [LessonsController::class, 'delete'])->name('admin.lessons.delete');
+        });
     });
 });

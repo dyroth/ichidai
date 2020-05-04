@@ -23,7 +23,7 @@ class CoachRepository
         $coach->filename = $coach->filename ?? "";
         $coach->save();
 
-        if ($coach-> filename == "" || isset($values['photo'])) {
+        if ($coach->filename == "" || isset($values['photo'])) {
             $filename = $coach->id . "-" . Carbon::now()->format('YmdHis') . "." . $values['photo']->getClientOriginalExtension();
             Storage::disk('local')->put('/public/upload/coaches/' . $filename, file_get_contents($values['photo']));
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Ichidai\Coaches;
 
 use App\Http\Requests\CreateEditCoach;
 use App\Ichidai\Coach\Coach;
@@ -26,14 +26,14 @@ class CoachesController extends Controller
         $data['title'] = "Lesgevers";
         $data['coaches'] = $this->coachRepository->getAll();
 
-        return view('back-end.coaches.index', $data);
+        return view('admin.coaches.index', $data);
     }
 
     public function create()
     {
         $data['title'] = "Lesgevers";
 
-        return view('back-end.coaches.edit', $data);
+        return view('admin.coaches.edit', $data);
     }
 
     public function write(CreateEditCoach $request)
@@ -48,7 +48,7 @@ class CoachesController extends Controller
         $data['title'] = $coach->name;
         $data['coach'] = $coach;
 
-        return view('back-end.coaches.edit', $data);
+        return view('admin.coaches.edit', $data);
     }
 
     public function update(CreateEditCoach $request, Coach $coach)

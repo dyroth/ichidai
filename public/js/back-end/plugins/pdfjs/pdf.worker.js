@@ -24894,7 +24894,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
     },
 
     compileGlyphImpl: function () {
-      error('Children classes should implement this.');
+      error('Children lessons should implement this.');
     },
 
     hasBuiltPath: function (unicode) {
@@ -36055,7 +36055,7 @@ var Shadings = {};
 Shadings.SMALL_NUMBER = 1e-6;
 
 // Radial and axial shading have very similar implementations
-// If needed, the implementations can be broken into two classes
+// If needed, the implementations can be broken into two lessons
 Shadings.RadialAxial = (function RadialAxialClosure() {
   function RadialAxial(dict, matrix, xref, res) {
     this.matrix = matrix;

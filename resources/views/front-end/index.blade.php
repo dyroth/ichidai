@@ -15,22 +15,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-12 col-lg-5 mb-5 mb-lg-0">
-                    <h2 class="mb-3 text-uppercase">Alles over <strong class="text-black font-weight-bold">Ichi Dai</strong>
-                    </h2>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusamus, rerum illo
-                        facilis reiciendis.</p>
-                    <p class="mb-4">Iste aut dolorem veritatis saepe nesciunt distinctio voluptas sapiente sunt perspiciatis
-                        autem minima, iure provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
-                        quas.</p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-                        <li>Nemo, voluptate? Voluptates odit, aperiam nostrum! Ipsa.</li>
-                        <li>Itaque voluptatum ducimus aliquam, est fuga molestiae?</li>
-                        <li>Accusamus porro at commodi delectus, nesciunt molestiae.</li>
-                    </ul>
+                    {{ $intro['text'] }}
                 </div>
                 <div class="col-md-12 col-lg-6 ml-auto">
-                    <img src="images/about.jpg" alt="Image" class="img-fluid">
+                    <img src="{{ '/storage/upload/intro/' . $intro['filename'] }}" alt="Image" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -45,41 +33,19 @@
 
             <div class="nonloop-block-13 owl-carousel">
 
-                <div class="block-media-1 heading-with-border bg-white">
-                    <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                    <div class="p-4">
-                        <h3 class="h5 heading">Kata</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
-                        <span class="d-flex align-items-center">
-                <span class="icon-person h4 mr-3"></span>
-                <span>Reginald, Sebastien, Céline</span>
-              </span>
+                @foreach($lessons as $lesson)
+                    <div class="block-media-1 heading-with-border bg-white">
+                        <img src="{{ '/storage/upload/lessons/' . $lesson->filename }}" alt="Image" class="img-fluid">
+                        <div class="p-4">
+                            <h3 class="h5 heading">{{ $lesson->name }}</h3>
+                            <p>{{ $lesson->info }}</p>
+                            <span class="d-flex align-items-center">
+                                <span class="icon-person h4 mr-3"></span>
+                                <span>{{ $lesson->coaches }}</span>
+                            </span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="block-media-1 heading-with-border bg-white">
-                    <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-                    <div class="p-4">
-                        <h3 class="h5 heading">Kumite</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
-                        <span class="d-flex align-items-center">
-                <span class="icon-person h4 mr-3"></span>
-                <span>Sebastien</span>
-              </span>
-                    </div>
-                </div>
-
-                <div class="block-media-1 heading-with-border bg-white">
-                    <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                    <div class="p-4">
-                        <h3 class="h5 heading">Kids</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, excepturi!</p>
-                        <span class="d-flex align-items-center">
-                <span class="icon-person h4 mr-3"></span>
-                <span>Sebastien, Céline</span>
-              </span>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
 

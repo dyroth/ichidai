@@ -464,14 +464,14 @@ $.Widget.prototype = {
 
 			// We are doing this to create a new jQuery object because the _removeClass() call
 			// on the next line is going to destroy the reference to the current elements being
-			// tracked. We need to save a copy of this collection so that we can add the new classes
+			// tracked. We need to save a copy of this collection so that we can add the new lessons
 			// below.
 			elements = $( currentElements.get() );
 			this._removeClass( currentElements, classKey );
 
-			// We don't use _addClass() here, because that uses this.options.classes
-			// for generating the string of classes. We want to use the value passed in from
-			// _setOption(), this is the new value of the classes option which was passed to
+			// We don't use _addClass() here, because that uses this.options.lessons
+			// for generating the string of lessons. We want to use the value passed in from
+			// _setOption(), this is the new value of the lessons option which was passed to
 			// _setOption(). We pass this value directly to _classes().
 			elements.addClass( this._classes( {
 				element: elements,

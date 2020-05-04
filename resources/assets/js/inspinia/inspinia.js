@@ -249,7 +249,7 @@ function animationHover(element, animation) {
       element.addClass('animated ' + animation);
     },
     function() {
-      //wait for animation to finish before removing classes
+      //wait for animation to finish before removing lessons
       window.setTimeout(function() {
         element.removeClass('animated ' + animation);
       }, 2000);

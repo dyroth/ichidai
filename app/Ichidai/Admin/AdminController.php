@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Ichidai\Admin;
 
 use App\Http\Controllers\Controller;
 
@@ -10,6 +10,6 @@ class AdminController extends Controller
     {
         $data['title'] = "Admin";
 
-        return view('back-end.index', $data);
+        return view('admin.index', $data);
     }
 }

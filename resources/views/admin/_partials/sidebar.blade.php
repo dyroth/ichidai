@@ -29,7 +29,7 @@
         </ul>
 
         @section('sidebar-menu')
-            @include('back-end._partials.menu')
+            @include('admin._partials.menu')
         @show
     </div>
 

@@ -14,8 +14,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Styles -->
+    <link href="{{ mix('/css/inspinia.css') }}" rel="stylesheet">
+
     @section('styles')
-        <link href="{{ mix('/css/inspinia.css') }}" rel="stylesheet">
     @show
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,14 +30,14 @@
 
 <body class="body-small {{ config('inspinia.skin', '') }}">
 <div id="wrapper">
-    @include('back-end._partials.sidebar')
-    @include('back-end._partials.main-panel')
+    @include('admin._partials.sidebar')
+    @include('admin._partials.main-panel')
 </div>
 
+<script src="{{ mix('/js/manifest.js') }}" charset="utf-8"></script>
+<script src="{{ mix('/js/vendor.js') }}" charset="utf-8"></script>
+<script src="{{ mix('/js/inspinia.js') }}" charset="utf-8"></script>
 @section('scripts')
-    <script src="{{ mix('/js/manifest.js') }}" charset="utf-8"></script>
-    <script src="{{ mix('/js/vendor.js') }}" charset="utf-8"></script>
-    <script src="{{ mix('/js/inspinia.js') }}" charset="utf-8"></script>
 @show
 @stack('body')
 </body>
