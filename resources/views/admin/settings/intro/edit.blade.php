@@ -33,7 +33,6 @@
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
-                            <div class="hr-line-dashed"></div>
                             <div class="form-group"><label class="col-sm-2 control-label">Foto</label>
                                 <div class="col-sm-10">
                                     <input id="photo" type="file" class="form-control-file space" name="photo" accept="image/*" value="{{ old('photo', $intro['filename'] ?? "") }}" @if($intro['filename'] == '') required @endif>

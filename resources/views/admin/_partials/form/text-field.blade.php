@@ -10,3 +10,4 @@
         <textarea type="text" class="form-control" name="{{ $name }}">{{ $value ?? null }}</textarea>
     </div>
 </div>
+<div class="hr-line-dashed"></div>

@@ -5,7 +5,6 @@ namespace App\Ichidai\LessonTime;
 use App\Http\Requests\CreateEditLesson;
 use App\Ichidai\coach\Lesson;
 use App\Http\Controllers\Controller;
-use App\Ichidai\LessonTime\LessonTimeRepository;
 
 class LessonTimesController extends Controller
 {
@@ -32,14 +31,14 @@ class LessonTimesController extends Controller
     {
         $data['title'] = "Lestijden";
 
-        return view('admin.lessons.edit', $data);
+        return view('admin.lesson_times.edit', $data);
     }
 
     public function write(CreateEditLesson $request)
     {
         $this->lessonTimeRepository->update(new Lesson(), $request->all());
 
-        return redirect(route('admin.lessons.index'));
+        return redirect(route('admin.lesson_times.index'));
     }
 
     public function edit(Lesson $lesson)
@@ -47,20 +46,20 @@ class LessonTimesController extends Controller
         $data['title'] = $lesson->name;
         $data['lesson'] = $lesson;
 
-        return view('admin.lessons.edit', $data);
+        return view('admin.lesson_times.edit', $data);
     }
 
     public function update(CreateEditLesson $request, Lesson $lesson)
     {
         $this->lessonTimeRepository->update($lesson, $request->all());
 
-        return redirect(route('admin.lessons.index'));
+        return redirect(route('admin.lesson_times.index'));
     }
 
     public function delete(Lesson $lesson)
     {
         $this->lessonTimeRepository->delete($lesson);
 
-        return redirect(route('admin.lessons.index'));
+        return redirect(route('admin.lesson_times.index'));
     }
 }

@@ -3,3 +3,4 @@
         <input type="text" class="form-control" name="{{ $name }}" value="{{ $value ?? null }}" required>
     </div>
 </div>
+<div class="hr-line-dashed"></div>
