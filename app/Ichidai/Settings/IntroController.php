@@ -22,10 +22,7 @@ class IntroController extends Controller
         );
 
         $data['title'] = "Introductie";
-        $data['intro'] = [
-            'text' => $intro->properties['text'],
-            'filename' => $intro->properties['filename'],
-        ];
+        $data['intro'] = $intro->properties;
 
         return view('admin.settings.intro.edit', $data);
     }
@@ -36,7 +33,7 @@ class IntroController extends Controller
 
         $properties = [
             'text' => $request->text,
-            'filename' => $intro->properties['filename'],
+            'filename' => $intro->properties->filename,
         ];
 
         if (isset($request['photo'])) {

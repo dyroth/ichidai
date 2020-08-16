@@ -21,7 +21,7 @@ return [
         'Lestijden' =>
             [
                 'route' => 'admin.lesson_times.index',
-                'icon' => 'fa-clock-o',
+                'icon' => 'fa fa-clock-o',
             ],
     ]
 ];

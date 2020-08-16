@@ -20,30 +20,8 @@
                         <form class="form-horizontal" method="POST" enctype="multipart/form-data"
                               action="{{ route('admin.introduction.update') }}">
                             @csrf
-
-                            <div class="form-group"><label class="col-sm-2 control-label">Tekst</label>
-                                <div class="col-sm-10">
-                                    <div class="col-lg-12">
-                                        <div class="ibox float-e-margins">
-                                            <div class="ibox-content no-padding">
-                                                <textarea class="summernote" name="text">{{ $intro['text'] ?? "" }}</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hr-line-dashed"></div>
-                            <div class="form-group"><label class="col-sm-2 control-label">Foto</label>
-                                <div class="col-sm-10">
-                                    <input id="photo" type="file" class="form-control-file space" name="photo" accept="image/*" value="{{ old('photo', $intro['filename'] ?? "") }}" @if($intro['filename'] == '') required @endif>
-                                </div>
-                                @if($intro['filename'] != '')
-                                    <div class="col-sm-4">
-                                        <img src="{{ '/storage/upload/intro/' . $intro['filename'] }}" alt="Image" class="img-fluid" style="max-height: 300px; padding-top: 20px">
-                                    </div>
-                                @endif
-                            </div>
-
+                            @include('admin._partials.form.wysiwyg', ['label' => 'Introductie', 'name' => 'text', 'value' => old('text', $intro->text ?? "")])
+                            @include('admin._partials.form.image', ['subject' => $intro ?? null, 'folderName' => 'intro'])
                             @include('admin._partials.form.submit', ['route' => route('admin.introduction.edit')])
                         </form>
                     </div>

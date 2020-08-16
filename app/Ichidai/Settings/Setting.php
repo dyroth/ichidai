@@ -18,6 +18,6 @@ class Setting extends Model
     ];
 
     protected $casts = [
-        'properties' => 'array'
+        'properties' => 'object'
     ];
 }
