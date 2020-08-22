@@ -2,9 +2,9 @@
 
 namespace App\Ichidai\LessonTime;
 
-use App\Http\Requests\CreateEditLesson;
-use App\Ichidai\coach\Lesson;
+use App\Http\Requests\CreateEditLessonTime;
 use App\Http\Controllers\Controller;
+use App\Ichidai\coach\LessonTime;
 
 class LessonTimesController extends Controller
 {
@@ -34,31 +34,31 @@ class LessonTimesController extends Controller
         return view('admin.lesson_times.edit', $data);
     }
 
-    public function write(CreateEditLesson $request)
+    public function write(CreateEditLessonTime $request)
     {
-        $this->lessonTimeRepository->update(new Lesson(), $request->all());
+        $this->lessonTimeRepository->update(new LessonTime(), $request->all());
 
         return redirect(route('admin.lesson_times.index'));
     }
 
-    public function edit(Lesson $lesson)
+    public function edit(LessonTime $lessonTime)
     {
-        $data['title'] = $lesson->name;
-        $data['lesson'] = $lesson;
+        $data['title'] = $lessonTime->name;
+        $data['lesson'] = $lessonTime;
 
         return view('admin.lesson_times.edit', $data);
     }
 
-    public function update(CreateEditLesson $request, Lesson $lesson)
+    public function update(CreateEditLessonTime $request, LessonTime $lessonTime)
     {
-        $this->lessonTimeRepository->update($lesson, $request->all());
+        $this->lessonTimeRepository->update($lessonTime, $request->all());
 
         return redirect(route('admin.lesson_times.index'));
     }
 
-    public function delete(Lesson $lesson)
+    public function delete(LessonTime $lessonTime)
     {
-        $this->lessonTimeRepository->delete($lesson);
+        $this->lessonTimeRepository->delete($lessonTime);
 
         return redirect(route('admin.lesson_times.index'));
     }
