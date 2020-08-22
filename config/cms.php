@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'inhoud',
+    'title' => 'Inhoud',
     'items' => [
         'Introductie' =>
             [
