@@ -14,9 +14,9 @@ class CreateEditLesson extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'info' => ['required'],
-            'coaches' => ['required'],
+            'name' => ['required', 'string'],
+            'info' => ['required', 'string'],
+            'coaches' => ['required', 'string'],
         ];
     }
 }

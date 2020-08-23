@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Ichidai\coach;
+namespace App\Ichidai\LessonTime;
 
+use App\Casts\CastTimestampWithoutSeconds;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -26,7 +27,7 @@ class LessonTime extends Model
     ];
 
     protected $casts = [
-        'starting_time' => '',
-        'ending_time' => '',
+        'starting_time' => CastTimestampWithoutSeconds::class,
+        'ending_time' => CastTimestampWithoutSeconds::class,
     ];
 }

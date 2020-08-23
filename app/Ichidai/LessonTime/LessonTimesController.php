@@ -4,7 +4,6 @@ namespace App\Ichidai\LessonTime;
 
 use App\Http\Requests\CreateEditLessonTime;
 use App\Http\Controllers\Controller;
-use App\Ichidai\coach\LessonTime;
 
 class LessonTimesController extends Controller
 {

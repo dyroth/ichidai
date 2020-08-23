@@ -14,9 +14,9 @@ class CreateEditCoach extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'bio' => ['required'],
-            'grade' => ['required'],
+            'name' => ['required', 'string'],
+            'bio' => ['required', 'string'],
+            'grade' => ['required', 'string'],
             'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096',
         ];
     }

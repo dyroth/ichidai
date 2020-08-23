@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('/css/inspinia.css') }}" rel="stylesheet">
+    <link href="/css/back-end/style.css" rel="stylesheet">
 
     @section('styles')
     @show

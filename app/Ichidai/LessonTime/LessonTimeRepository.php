@@ -4,8 +4,6 @@
 namespace App\Ichidai\LessonTime;
 
 
-use App\Ichidai\coach\LessonTime;
-
 class LessonTimeRepository
 {
 

@@ -5,7 +5,7 @@ namespace App\Ichidai\Frontend;
 use App\Http\Controllers\Controller;
 use App\Ichidai\coach\Coach;
 use App\Ichidai\coach\Lesson;
-use App\Ichidai\coach\LessonTime;
+use App\Ichidai\LessonTime\LessonTime;
 use App\Ichidai\Settings\Setting;
 
 class HomeController extends Controller

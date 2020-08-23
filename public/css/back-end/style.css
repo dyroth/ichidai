@@ -5175,6 +5175,9 @@ dd.project-people {
   color: #676a6c;
   font-weight: 600;
 }
+.project-title {
+  width: 40%;
+}
 .project-list table tr td {
   border-top: none;
   border-bottom: 1px solid #e7eaec;

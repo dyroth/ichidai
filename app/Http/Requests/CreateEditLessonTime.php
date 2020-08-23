@@ -15,12 +15,19 @@ class CreateEditLessonTime extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'day' => ['required'],
-            'group' => ['required'],
-            'location' => ['required'],
-            'starting_time' => ['required'],
-            'ending_time' => ['required'],
+            'name' => ['required', 'string'],
+            'day' => ['required', 'string'],
+            'group' => ['required', 'string'],
+            'location' => ['required', 'string'],
+            'starting_time' => ['required', 'date_format:H:i'],
+            'ending_time' => ['required', 'date_format:H:i', 'after:starting_time'],
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'ending_time.after' => 'De start tijd moet na de begin tijd liggen.',
         ];
     }
 }

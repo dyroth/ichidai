@@ -14,7 +14,7 @@ class CreateEditIntro extends FormRequest
     public function rules()
     {
         return [
-            'text' => ['required'],
+            'text' => ['required', 'string'],
         ];
     }
 }
