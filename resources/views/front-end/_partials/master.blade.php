@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
+    </div> <!-- .general_info-mobile-menu -->
 
     <div class="site-navbar-wrap bg-white">
         <div class="site-navbar-top">

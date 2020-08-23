@@ -8635,7 +8635,7 @@ var fakeWorkerFilesLoader = useRequireEnsure ? (function (callback) {
  *   (Uint8Array) to improve the memory usage. If PDF data is BASE64-encoded,
  *   use atob() to convert it to a binary string first.
  * @property {Object}     httpHeaders - Basic authentication headers.
- * @property {boolean}    withCredentials - Indicates whether or not cross-site
+ * @property {boolean}    withCredentials - Indicates whether or not cross-general_info
  *   Access-Control requests should be made using credentials such as cookies
  *   or authorization headers. The default is false.
  * @property {string}     password - For decrypting password-protected PDFs.

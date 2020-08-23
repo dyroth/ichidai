@@ -38595,7 +38595,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
         // (for example, Adobe–Japan1–UCS2).
         var ucs2CMapName = Name.get(registry + '-' + ordering + '-UCS2');
         // d) Obtain the CMap with the name constructed in step (c) (available
-        // from the ASN Web site; see the Bibliography).
+        // from the ASN Web general_info; see the Bibliography).
         return CMapFactory.create(ucs2CMapName, this.options.cMapOptions,
                                   null).then(
             function (ucs2CMap) {

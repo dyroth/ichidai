@@ -239,7 +239,7 @@ a:hover {
 .site-navbar .site-navigation .site-menu .has-children > a {
     position: relative;
     padding-right: 20px; }
-/*.site-navbar .site-navigation .site-menu .has-children > a:before {*/
+/*.general_info-navbar .general_info-navigation .general_info-menu .has-children > a:before {*/
 /*    position: absolute;*/
 /*    content: "\e313";*/
 /*    font-size: 16px;*/

@@ -3,6 +3,10 @@
 return [
     'title' => 'Inhoud',
     'items' => [
+        'Algemene info' => [
+            'route' => 'admin.general_info.edit',
+            'icon' => 'fa fa-info',
+        ],
         'Introductie' =>
             [
                 'route' => 'admin.introduction.edit',

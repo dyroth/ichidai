@@ -3,9 +3,7 @@
 namespace App\Ichidai\Settings;
 
 use App\Http\Requests\CreateEditIntro;
-use App\Ichidai\coach\Lesson;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 
 class IntroController extends Controller

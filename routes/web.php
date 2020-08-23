@@ -6,6 +6,7 @@ use App\Ichidai\Frontend\HomeController;
 use App\Ichidai\Lesson\LessonsController;
 use App\Ichidai\LessonTime\LessonTimesController;
 use App\Ichidai\Settings\IntroController;
+use App\Ichidai\Settings\GeneralInfoController;
 
 Auth::routes([
     'register' => false,
@@ -20,6 +21,9 @@ Route::group(['middleware' => ['auth']], function() {
 
         Route::get('/settings/intro', [IntroController::class, 'edit'])->name('admin.introduction.edit');
         Route::post('/settings/intro', [IntroController::class, 'update'])->name('admin.introduction.update');
+
+        Route::get('/settings/algemene-info', [GeneralInfoController::class, 'edit'])->name('admin.general_info.edit');
+        Route::post('/settings/algemene info', [GeneralInfoController::class, 'update'])->name('admin.general_info.update');
 
         Route::prefix('coaches')->group(function () {
             Route::get('/', [CoachesController::class, 'index'])->name('admin.coaches.index');
