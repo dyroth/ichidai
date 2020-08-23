@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="/img/favicon.png">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="/css/front-end/bootstrap.min.css">
     <link rel="stylesheet" href="/css/front-end/magnific-popup.css">
     <link rel="stylesheet" href="/css/front-end/jquery-ui.css">
@@ -74,21 +75,29 @@
                                 <div class="container">
                                     <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
                                                                                                   class="site-menu-toggle js-menu-toggle text-black"><span
-                                                class="icon-menu h3"></span></a></div>
+                                                    class="icon-menu h3"></span></a></div>
 
                                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                                        <li class="active">
-                                            <a href="#about">Over Ichi Dai</a>
-                                        </li>
-                                        <li>
-                                            <a href="#classes">Lessen</a>
-                                        </li>
-                                        <li>
-                                            <a href="#schedule">Lesuren</a>
-                                        </li>
-                                        <li>
-                                            <a href="#coaches">Lesgevers</a>
-                                        </li>
+                                        @if($intro->text || $intro->filename)
+                                            <li class="active">
+                                                <a href="#about">Over Ichi Dai</a>
+                                            </li>
+                                        @endif
+                                        @if($lessons->count() > 0)
+                                            <li>
+                                                <a href="#classes">Lessen</a>
+                                            </li>
+                                        @endif
+                                        @if($lessonTimes->count() > 0)
+                                            <li>
+                                                <a href="#schedule">Lesuren</a>
+                                            </li>
+                                        @endif
+                                        @if($coaches->count() > 0)
+                                            <li>
+                                                <a href="#coaches">Lesgevers</a>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </div>
                             </nav>
@@ -104,7 +113,6 @@
     <footer class="site-footer">
         <div class="container">
 
-
             <div class="row">
                 <div class="col-lg-7">
                     <div class="row">
@@ -117,10 +125,18 @@
                         <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
                             <h3 class="footer-heading mb-4 text-primary">Menu</h3>
                             <ul class="list-unstyled">
-                                <li><a href="#about">Over Ichi Dai</a></li>
-                                <li><a href="#classes">Lessen</a></li>
-                                <li><a href="#schedule">Lesuren</a></li>
-                                <li><a href="#coaches">Lesgevers</a></li>
+                                @if($intro->text || $intro->filename)
+                                    <li><a href="#about">Over Ichi Dai</a></li>
+                                @endif
+                                @if($lessons->count() > 0)
+                                    <li><a href="#classes">Lessen</a></li>
+                                @endif
+                                @if($lessonTimes->count() > 0)
+                                    <li><a href="#schedule">Lesuren</a></li>
+                                @endif
+                                @if($coaches->count() > 0)
+                                    <li><a href="#coaches">Lesgevers</a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -142,10 +158,13 @@
                     <div class="row">
                         <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Sociale Media</h3></div>
                         <div class="col-md-12">
-                            <p >
-                                <a href="https://www.facebook.com/ichidaidojo/" class="pb-2 pr-2 pl-0"><i class="fab fa-facebook-square fa-2x"></i></a>
-                                <a href="https://twitter.com/ichidaidojo" class="p-2"><i class="fab fa-twitter-square fa-2x"></i></a>
-                                <a href="https://www.youtube.com/channel/UCXwavF9lqNrpFvWP0mxCkrw" class="p-2"><i class="fab fa-youtube fa-2x"></i></a>
+                            <p>
+                                <a href="https://www.facebook.com/ichidaidojo/" class="pb-2 pr-2 pl-0"><i
+                                            class="fab fa-facebook-square fa-2x"></i></a>
+                                <a href="https://twitter.com/ichidaidojo" class="p-2"><i
+                                            class="fab fa-twitter-square fa-2x"></i></a>
+                                <a href="https://www.youtube.com/channel/UCXwavF9lqNrpFvWP0mxCkrw" class="p-2"><i
+                                            class="fab fa-youtube fa-2x"></i></a>
                             </p>
                         </div>
                     </div>

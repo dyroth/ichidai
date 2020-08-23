@@ -17,4 +17,11 @@ class LessonTimeRepository
         $lessonTime->fill($all);
         $lessonTime->save();
     }
+
+    public function delete(LessonTime $lessonTime)
+    {
+        $lessonTime->delete();
+
+        return redirect(route('admin.lesson_times.index'));
+    }
 }
