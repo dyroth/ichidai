@@ -1,4 +1,4 @@
-FROM php:7.2.13-apache-stretch
+FROM php:7.3.12-apache-stretch
 
 MAINTAINER Dyroth
 
@@ -10,14 +10,17 @@ WORKDIR /srv/app
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN apt-get update && apt-get install -y libmagickwand-6.q16-dev --no-install-recommends \
- && ln -s /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/MagickWand-config /usr/bin \
- && pecl install imagick \
- && echo "extension=imagick.so" > /usr/local/etc/php/conf.d/ext-imagick.ini \
- && apt-get install poppler-utils -y \
- && apt-get install xpdf -y \
- && apt-get install git -y
+RUN apt-get update && apt-get install -y \
+    zlib1g-dev \
+    libzip-dev \
+    libpng-dev
 
-RUN docker-php-ext-install mbstring pdo pdo_mysql gd sockets calendar zip \
+RUN docker-php-ext-install zip
+
+RUN apt-get install -y libicu-dev \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install intl
+
+RUN docker-php-ext-install pdo pdo_mysql bcmath gd intl \
     && chown -R www-data:www-data /srv/app \
     && a2enmod rewrite
