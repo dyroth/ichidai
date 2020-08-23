@@ -43,9 +43,9 @@ Route::group(['middleware' => ['auth']], function() {
             Route::get('/', [LessonTimesController::class, 'index'])->name('admin.lesson_times.index');
             Route::get('/create', [LessonTimesController::class, 'create'])->name('admin.lesson_times.create');
             Route::post('/create', [LessonTimesController::class, 'write'])->name('admin.lesson_times.write');
-            Route::get('/edit/{lesson}', [LessonTimesController::class, 'edit'])->name('admin.lesson_times.edit');
-            Route::post('/edit/{lesson}', [LessonTimesController::class, 'update'])->name('admin.lesson_times.update');
-            Route::get('/delete/{lesson}', [LessonTimesController::class, 'delete'])->name('admin.lesson_times.delete');
+            Route::get('/edit/{lessonTime}', [LessonTimesController::class, 'edit'])->name('admin.lesson_times.edit');
+            Route::post('/edit/{lessonTime}', [LessonTimesController::class, 'update'])->name('admin.lesson_times.update');
+            Route::get('/delete/{lessonTime}', [LessonTimesController::class, 'delete'])->name('admin.lesson_times.delete');
         });
     });
 });

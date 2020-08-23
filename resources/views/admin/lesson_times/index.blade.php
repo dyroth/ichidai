@@ -18,13 +18,13 @@
                         @foreach($lessonTimes as $lessonTime)
                             <tr>
                                 <td class="project-title">
-                                    <a href="{{ route('admin.lessons.edit', $lessonTime) }}">{{ $lessonTime->name }}</a>
+                                    <a href="{{ route('admin.lesson_times.edit', $lessonTime) }}">{{ $lessonTime->name }}</a>
                                     <br/>
                                     <small>{{ $lessonTime->coaches }}</small>
                                 </td>
 
                                 <td class="project-actions">
-                                    <a href="{{ route('admin.lessons.edit', $lessonTime) }}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                                    <a href="{{ route('admin.lesson_times.edit', $lessonTime) }}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
                                 </td>
                             </tr>
                         @endforeach

@@ -17,8 +17,8 @@ class CreateLessonTimeTables extends Migration
             $table->bigIncrements('id');
             $table->enum('day', config('weekdays'));
             $table->text('name');
-            $table->dateTime('starting_time');
-            $table->dateTime('ending_time');
+            $table->time('starting_time');
+            $table->time('ending_time');
             $table->text('group');
             $table->text('location');
             $table->timestamps();
@@ -32,6 +32,6 @@ class CreateLessonTimeTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lesson_time');
+        Schema::dropIfExists('lesson_times');
     }
 }

@@ -24,4 +24,9 @@ class LessonTime extends Model
         'group',
         'location',
     ];
+
+    protected $casts = [
+        'starting_time' => '',
+        'ending_time' => '',
+    ];
 }

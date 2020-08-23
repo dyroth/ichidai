@@ -44,7 +44,7 @@ class LessonTimesController extends Controller
     public function edit(LessonTime $lessonTime)
     {
         $data['title'] = $lessonTime->name;
-        $data['lesson'] = $lessonTime;
+        $data['lessonTime'] = $lessonTime;
 
         return view('admin.lesson_times.edit', $data);
     }

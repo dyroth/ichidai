@@ -18,7 +18,7 @@ class CreateEditLessonTime extends FormRequest
             'name' => ['required'],
             'day' => ['required'],
             'group' => ['required'],
-            'grouplocation' => ['required'],
+            'location' => ['required'],
             'starting_time' => ['required'],
             'ending_time' => ['required'],
         ];
