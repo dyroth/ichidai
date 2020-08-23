@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-7 text-center" data-aos="fade">
-                    <h1 id="main-title"><strong>Ichi Dai</strong><br>Kyokushin</h1>
+                    <h1 id="main-title"><strong>{{ $generalInfo->general->name ?? 'Club' }}</strong><br>{{ $generalInfo->general->martial_art_style ?? 'Martial Arts' }} {{ $generalInfo->general->martial_art ?? null }}</h1>
                 </div>
             </div>
         </div>

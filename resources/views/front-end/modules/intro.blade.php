@@ -1,4 +1,4 @@
-@if($intro->text || $intro->filename)
+@if(isset($intro) && ($intro->text || $intro->filename))
     <div class="site-section" id="about">
         <div class="container">
             <div class="row align-items-center">

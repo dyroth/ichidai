@@ -47,14 +47,21 @@
                     </div>
                     <div class="col-6">
                         <div class="d-flex ml-auto">
-                            <span class="d-flex align-items-center ml-auto mr-4" style="color: #fff">
-                                <span class="icon-envelope mr-2"></span>
-                                <span class="d-none d-md-inline-block">info@ichidai.be</span>
-                            </span>
-                            <span class="d-flex align-items-center" style="color: #fff">
-                                <span class="icon-phone mr-2"></span>
-                                <span class="d-none d-md-inline-block">+32 496 10 60 90</span>
-                            </span>
+                            @if(isset($generalInfo))
+                                @if($generalInfo->contact_info->email)
+                                <span class="d-flex align-items-center ml-auto mr-4" style="color: #fff">
+                                    <span class="icon-envelope mr-2"></span>
+                                    <span class="d-none d-md-inline-block">{{ $generalInfo->contact_info->email }}</span>
+                                </span>
+                                @endif
+
+                                @if($generalInfo->contact_info->phone)
+                                <span class="d-flex align-items-center" style="color: #fff">
+                                    <span class="icon-phone mr-2"></span>
+                                    <span class="d-none d-md-inline-block">{{ $generalInfo->contact_info->phone }}</span>
+                                </span>
+                                @endif
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -68,19 +75,19 @@
                 <div class="py-1">
                     <div class="row align-items-center">
                         <div class="col-2">
-                            <h2 class="mb-0 site-logo">Ichi Dai Dojo</h2>
+                            <h2 class="mb-0 site-logo">{{ $generalInfo->general->name ?? "Club" }}</h2>
                         </div>
                         <div class="col-10">
                             <nav class="site-navigation text-right" role="navigation">
                                 <div class="container">
-                                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
-                                                                                                  class="site-menu-toggle js-menu-toggle text-black"><span
-                                                    class="icon-menu h3"></span></a></div>
+                                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
+                                        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+                                            <span class="icon-menu h3"></span></a></div>
 
                                     <ul class="site-menu js-clone-nav d-none d-lg-block">
-                                        @if($intro->text || $intro->filename)
+                                        @if(isset($intro) && ($intro->text || $intro->filename))
                                             <li class="active">
-                                                <a href="#about">Over Ichi Dai</a>
+                                                <a href="#about">Over {{ $generalInfo->general->name ?? "club" }}</a>
                                             </li>
                                         @endif
                                         @if($lessons->count() > 0)
@@ -117,15 +124,17 @@
                 <div class="col-lg-7">
                     <div class="row">
                         <div class="col-6 col-md-4 col-lg-8 mb-5 mb-lg-0">
-                            <h3 class="footer-heading mb-4 text-primary">Kyokushin Karate</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam,
-                                placeat amet sint vel impedit reprehenderit eius expedita nemo consequatur obcaecati
-                                aperiam, blanditiis quia iste in! Assumenda, odio?</p>
+                            @if(isset($generalInfo->footer_text->footer_title))
+                                <h3 class="footer-heading mb-4 text-primary">{{ $generalInfo->footer_text->footer_title }}</h3>
+                            @endif
+                            @if(isset($generalInfo->footer_text->footer_text))
+                                <p>{{ $generalInfo->footer_text->footer_text }}</p>
+                            @endif
                         </div>
                         <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
                             <h3 class="footer-heading mb-4 text-primary">Menu</h3>
                             <ul class="list-unstyled">
-                                @if($intro->text || $intro->filename)
+                                @if(isset($intro) && ($intro->text || $intro->filename))
                                     <li><a href="#about">Over Ichi Dai</a></li>
                                 @endif
                                 @if($lessons->count() > 0)
@@ -145,13 +154,19 @@
                     <div class="row mb-5">
                         <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Contact Info</h3></div>
                         <div class="col-md-6">
-                            <a href="https://goo.gl/maps/GXRiv">
-                                <p style="text-decoration: underline">Eikenstraat 8 <br> 2000 Antwerpen</p>
+                            <a href="{{ $generalInfo->contact_info->google_maps_url ?? "#" }}">
+                                <p style="text-decoration: underline">{{ $generalInfo->contact_info->street_and_number ?? "" }} <br> {{ $generalInfo->contact_info->postal_code ?? "" }} {{ $generalInfo->contact_info->city ?? "" }}</p>
                             </a>
                         </div>
                         <div class="col-md-6">
-                            Tel. +32 496 10 60 90 <br>
-                            Mail. info@ichidai.be
+                            @if(isset($generalInfo))
+                                @if($generalInfo->contact_info->phone)
+                                    Tel. {{ $generalInfo->contact_info->phone }}
+                                @endif
+                                @if($generalInfo->contact_info->email)
+                                    Mail. {{ $generalInfo->contact_info->email }}
+                                @endif
+                            @endif
                         </div>
                     </div>
 
@@ -159,12 +174,25 @@
                         <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Sociale Media</h3></div>
                         <div class="col-md-12">
                             <p>
-                                <a href="https://www.facebook.com/ichidaidojo/" class="pb-2 pr-2 pl-0"><i
+                                @if(isset($generalInfo->social_media->facebook))
+                                    <a href="{{ $generalInfo->social_media->facebook }}" class="pb-2 pr-2 pl-0"><i
                                             class="fab fa-facebook-square fa-2x"></i></a>
-                                <a href="https://twitter.com/ichidaidojo" class="p-2"><i
+                                @endif
+
+                                @if(isset($generalInfo->social_media->twitter))
+                                    <a href="{{ $generalInfo->social_media->twitter }}" class="p-2"><i
                                             class="fab fa-twitter-square fa-2x"></i></a>
-                                <a href="https://www.youtube.com/channel/UCXwavF9lqNrpFvWP0mxCkrw" class="p-2"><i
+                                @endif
+
+                                @if(isset($generalInfo->social_media->youtube))
+                                    <a href="{{ $generalInfo->social_media->youtube }}" class="p-2"><i
                                             class="fab fa-youtube fa-2x"></i></a>
+                                @endif
+
+                                @if(isset($generalInfo->social_media->instagram))
+                                    <a href="{{ $generalInfo->social_media->instagram }}" class="pb-2 pr-2 pl-0"><i
+                                            class="fab fa-instagram fa-2x"></i></a>
+                                @endif
                             </p>
                         </div>
                     </div>

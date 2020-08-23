@@ -13,11 +13,13 @@ class HomeController extends Controller
 
     public function index()
     {
-        $intro = Setting::where(['name' => 'intro'])->first()->properties;
+        $intro = Setting::where(['name' => 'intro'])->first()->properties ?? null;
+        $generalInfo = Setting::where(['name' => 'general_info'])->first()->properties ?? null;
         $coaches = Coach::all();
         $lessons = Lesson::all();
         $lessonTimes = LessonTime::all();
 
-        return view('front-end.index', compact('intro', 'coaches', 'lessons', 'lessonTimes'));
+
+        return view('front-end.index', compact('intro', 'coaches', 'lessons', 'lessonTimes', 'generalInfo'));
     }
 }
