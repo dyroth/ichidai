@@ -3,7 +3,6 @@
 namespace App\Ichidai\Lesson;
 
 use App\Http\Requests\CreateEditLesson;
-use App\Ichidai\coach\Lesson;
 use App\Http\Controllers\Controller;
 
 class LessonsController extends Controller

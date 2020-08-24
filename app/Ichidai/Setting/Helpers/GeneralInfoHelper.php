@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Ichidai\Settings\Helpers;
+namespace App\Ichidai\Setting\Helpers;
 
 
 class GeneralInfoHelper

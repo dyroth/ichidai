@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Ichidai\Settings;
+namespace App\Ichidai\Setting;
 
 use App\Http\Controllers\Controller;
-use App\Ichidai\Settings\Helpers\GeneralInfoHelper;
+use App\Ichidai\Setting\Helpers\GeneralInfoHelper;
 use Illuminate\Http\Request;
 
 class GeneralInfoController extends Controller

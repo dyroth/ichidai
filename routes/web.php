@@ -1,12 +1,12 @@
 <?php
 
 use App\Ichidai\Admin\AdminController;
-use App\Ichidai\Coaches\CoachesController;
+use App\Ichidai\Coach\CoachesController;
 use App\Ichidai\Frontend\HomeController;
 use App\Ichidai\Lesson\LessonsController;
 use App\Ichidai\LessonTime\LessonTimesController;
-use App\Ichidai\Settings\IntroController;
-use App\Ichidai\Settings\GeneralInfoController;
+use App\Ichidai\Setting\IntroController;
+use App\Ichidai\Setting\GeneralInfoController;
 
 Auth::routes([
     'register' => false,

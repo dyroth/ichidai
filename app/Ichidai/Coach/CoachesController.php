@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Ichidai\Coaches;
+namespace App\Ichidai\Coach;
 
 use App\Http\Requests\CreateEditCoach;
-use App\Ichidai\Coach\Coach;
-use App\Ichidai\Coach\CoachRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 

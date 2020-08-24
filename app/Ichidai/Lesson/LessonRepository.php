@@ -4,7 +4,6 @@
 namespace App\Ichidai\Lesson;
 
 
-use App\Ichidai\coach\Lesson;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 

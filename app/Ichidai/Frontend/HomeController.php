@@ -3,10 +3,10 @@
 namespace App\Ichidai\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Ichidai\coach\Coach;
-use App\Ichidai\coach\Lesson;
+use App\Ichidai\Coach\Coach;
+use App\Ichidai\Lesson\Lesson;
 use App\Ichidai\LessonTime\LessonTime;
-use App\Ichidai\Settings\Setting;
+use App\Ichidai\Setting\Setting;
 
 class HomeController extends Controller
 {
@@ -19,7 +19,8 @@ class HomeController extends Controller
         $lessons = Lesson::all();
         $lessonTimes = LessonTime::all();
 
+        $theme = Setting::where(['name' => 'active_theme'])->first()->properties ?? 'iron-muscle';
 
-        return view('front-end.index', compact('intro', 'coaches', 'lessons', 'lessonTimes', 'generalInfo'));
+        return view('front-end.' . $theme . '.index', compact('intro', 'coaches', 'lessons', 'lessonTimes', 'generalInfo'));
     }
 }

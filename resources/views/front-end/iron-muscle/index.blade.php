@@ -1,4 +1,4 @@
-@extends('front-end/_partials/master')
+@extends('front-end.iron-muscle._partials.master')
 
 @section('content')
     <div class="block-schedule overlay site-section" id="main-title-container">
@@ -11,8 +11,8 @@
         </div>
     </div>
 
-    @include('front-end.modules.intro', compact('intro'))
-    @include('front-end.modules.lessons', compact('lessons'))
-    @include('front-end.modules.lesson-times', compact('lessonTimes'))
-    @include('front-end.modules.coaches', compact('coaches'))
+    @include('front-end.iron-muscle.modules.intro', compact('intro'))
+    @include('front-end.iron-muscle.modules.lessons', compact('lessons'))
+    @include('front-end.iron-muscle.modules.lesson-times', compact('lessonTimes'))
+    @include('front-end.iron-muscle.modules.coaches', compact('coaches'))
 @endsection

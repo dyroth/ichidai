@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ichidai\Settings;
+namespace App\Ichidai\Setting;
 
 use App\Http\Requests\CreateEditIntro;
 use App\Http\Controllers\Controller;

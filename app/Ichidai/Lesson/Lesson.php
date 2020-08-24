@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Ichidai\coach;
+namespace App\Ichidai\Lesson;
 
 use Illuminate\Database\Eloquent\Model;
 

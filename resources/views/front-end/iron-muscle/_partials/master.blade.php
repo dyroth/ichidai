@@ -164,6 +164,7 @@
                                     Tel. {{ $generalInfo->contact_info->phone }}
                                 @endif
                                 @if($generalInfo->contact_info->email)
+                                    <br>
                                     Mail. {{ $generalInfo->contact_info->email }}
                                 @endif
                             @endif
