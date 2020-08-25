@@ -3,6 +3,7 @@
 use App\Ichidai\Admin\AdminController;
 use App\Ichidai\Coach\CoachesController;
 use App\Ichidai\Frontend\HomeController;
+use App\Ichidai\Grade\GradesController;
 use App\Ichidai\Lesson\LessonsController;
 use App\Ichidai\LessonTime\LessonTimesController;
 use App\Ichidai\Setting\IntroController;
@@ -50,6 +51,17 @@ Route::group(['middleware' => ['auth']], function() {
             Route::get('/edit/{lessonTime}', [LessonTimesController::class, 'edit'])->name('admin.lesson_times.edit');
             Route::post('/edit/{lessonTime}', [LessonTimesController::class, 'update'])->name('admin.lesson_times.update');
             Route::get('/delete/{lessonTime}', [LessonTimesController::class, 'delete'])->name('admin.lesson_times.delete');
+        });
+
+        Route::prefix('grades')->group(function () {
+            Route::get('/', [GradesController::class, 'index'])->name('admin.grades.index');
+            Route::get('/create', [GradesController::class, 'create'])->name('admin.grades.create');
+            Route::post('/create', [GradesController::class, 'write'])->name('admin.grades.write');
+            Route::get('/edit/{grade}', [GradesController::class, 'edit'])->name('admin.grades.edit');
+            Route::post('/edit/{grade}', [GradesController::class, 'update'])->name('admin.grades.update');
+            Route::get('/delete/{grade}', [GradesController::class, 'delete'])->name('admin.grades.delete');
+            Route::get('/sort-up/{grade}', [GradesController::class, 'sortUp'])->name('admin.grades.sort_up');
+            Route::get('/sort-down/{grade}', [GradesController::class, 'sortDown'])->name('admin.grades.sort_down');
         });
     });
 });

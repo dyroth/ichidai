@@ -2,6 +2,7 @@
 
 return [
     'title' => 'Inhoud',
+    'icon' => 'fa fa-files-o',
     'items' => [
         'Algemene info' => [
             'route' => 'admin.general_info.edit',

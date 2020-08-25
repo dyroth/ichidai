@@ -8554,3 +8554,7 @@ body.md-skin {
     margin: 0;
   }
 }
+
+.sort-button {
+    margin: 0 !important;
+}
