@@ -2,6 +2,8 @@
 
 namespace App\Ichidai\User;
 
+use App\Casts\CastToEuDate;
+use App\Ichidai\Grade\Grade;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -15,7 +17,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'grade_id',
+        'birthdate',
     ];
 
     /**
@@ -34,5 +40,11 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'birthdate' => CastToEuDate::class,
     ];
+
+    public function grade()
+    {
+        return $this->belongsTo(Grade::class);
+    }
 }

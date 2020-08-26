@@ -14,10 +14,12 @@ class ExpandUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('grade')->after('email');
-            $table->string('weight')->after('grade');
-            $table->dateTime('subscription_until')->after('weight');
-            $table->boolean('warning_mail_sent')->after('subscription_until');
+            $table->boolean('admin')->default(false)->after('id');
+            $table->foreignId('grade_id')->default(1)->after('email');
+            $table->date('birthdate')->nullable()->after('grade_id');
+            $table->string('weight')->nullable()->after('birthdate');
+            $table->dateTime('subscription_until')->nullable()->after('weight');
+            $table->boolean('warning_mail_sent')->default(false)->after('subscription_until');
         });
     }
 
@@ -29,7 +31,12 @@ class ExpandUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->removeColumn('name');
+            $table->dropColumn('admin');
+            $table->dropColumn('grade_id');
+            $table->dropColumn('birthdate');
+            $table->dropColumn('weight');
+            $table->dropColumn('subscription_until');
+            $table->dropColumn('warning_mail_sent');
         });
     }
 }

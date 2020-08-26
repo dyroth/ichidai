@@ -21,7 +21,5 @@ class LessonTimeRepository
     public function delete(LessonTime $lessonTime)
     {
         $lessonTime->delete();
-
-        return redirect(route('admin.lesson_times.index'));
     }
 }

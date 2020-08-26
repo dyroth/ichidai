@@ -6,6 +6,7 @@ use App\Ichidai\Frontend\HomeController;
 use App\Ichidai\Grade\GradesController;
 use App\Ichidai\Lesson\LessonsController;
 use App\Ichidai\LessonTime\LessonTimesController;
+use App\Ichidai\Member\MemberController;
 use App\Ichidai\Setting\IntroController;
 use App\Ichidai\Setting\GeneralInfoController;
 
@@ -16,7 +17,7 @@ Auth::routes([
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::group(['middleware' => ['auth']], function() {
+Route::group(['middleware' => ['auth', 'admin']], function() {
     Route::prefix('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
@@ -62,6 +63,15 @@ Route::group(['middleware' => ['auth']], function() {
             Route::get('/delete/{grade}', [GradesController::class, 'delete'])->name('admin.grades.delete');
             Route::get('/sort-up/{grade}', [GradesController::class, 'sortUp'])->name('admin.grades.sort_up');
             Route::get('/sort-down/{grade}', [GradesController::class, 'sortDown'])->name('admin.grades.sort_down');
+        });
+
+        Route::prefix('members')->group(function () {
+            Route::get('/', [MemberController::class, 'index'])->name('admin.members.index');
+            Route::get('/create', [MemberController::class, 'create'])->name('admin.members.create');
+            Route::post('/create', [MemberController::class, 'write'])->name('admin.members.write');
+            Route::get('/edit/{member}', [MemberController::class, 'edit'])->name('admin.members.edit');
+            Route::post('/edit/{member}', [MemberController::class, 'update'])->name('admin.members.update');
+            Route::get('/delete/{member}', [MemberController::class, 'delete'])->name('admin.members.delete');
         });
     });
 });

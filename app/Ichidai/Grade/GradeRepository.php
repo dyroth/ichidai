@@ -45,4 +45,9 @@ class GradeRepository
             $grade2->save();
         }
     }
+
+    public function getSelectOptions()
+    {
+        return Grade::pluck('name', 'id');
+    }
 }

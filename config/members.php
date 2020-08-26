@@ -5,7 +5,7 @@ return [
     'icon' => 'fa fa-users',
     'items' => [
         'Leden' => [
-            'route' => 'admin.users.index',
+            'route' => 'admin.members.index',
             'icon' => 'fa fa-user',
         ],
         'Graden' => [
