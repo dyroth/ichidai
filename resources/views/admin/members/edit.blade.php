@@ -22,7 +22,8 @@
                             @include('admin._partials.form.input', ['label' => 'Volledige naam', 'name' => 'name', 'value' => old('name', $member->name ?? "")])
                             @include('admin._partials.form.input', ['label' => 'Email', 'name' => 'email', 'value' => old('email', $member->email ?? "")])
                             @include('admin._partials.form.select', ['label' => 'Graad', 'name' => 'grade_id', 'options' => $grades, 'value' => old('grade_id', $member->grade->id ?? "")])
-                            <input type="hidden" value="{{ $member->id }}" name="member_id">
+
+                            <input type="hidden" value="{{ isset($member) ?? $member->id }}" name="member_id">
 
                             <div class="form-group"><label class="col-sm-2 control-label">Geboortedatum</label>
                                 <div class="col-sm-10">

@@ -26,8 +26,8 @@ class MemberRepository
 
             $all['password'] = Hash::make($password);
 
-            Mail::to($member->email)
-                ->send(new SendMemberPassword($member->name, $password, $member->email));
+            Mail::to($all['email'])
+                ->send(new SendMemberPassword($all['name'], $password, $all['email']));
         }
 
         $all['birthdate'] = Carbon::createFromFormat('d/m/Y', $all['birthdate']);

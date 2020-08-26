@@ -17,16 +17,6 @@
                         <tbody>
                         @foreach($members as $member)
                             <tr>
-                                <td>
-                                    <div class="btn-group-vertical">
-                                        @if (!$loop->first)
-                                            <a href="{{ route('admin.members.sort_up', compact('member')) }}" class="btn btn-xs btn-success sort-button">+</a>
-                                        @endif
-                                        @if (!$loop->last)
-                                            <a href="{{ route('admin.members.sort_down', compact('member')) }}" class="btn btn-xs btn-warning sort-button">-</a>
-                                        @endif
-                                    </div>
-                                </td>
                                 <td class="project-title">
                                     <a href="{{ route('admin.members.edit', $member) }}">{{ $member->name }}</a><br>
                                 </td>

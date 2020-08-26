@@ -1,4 +1,4 @@
-@extends('inspinia::layouts.auth')
+@extends('inspinia.layouts.auth')
 
 @section('content')
 <div class="passwordBox animated fadeInDown">
