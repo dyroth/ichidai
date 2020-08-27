@@ -7,6 +7,7 @@ use App\Http\Requests\CreateEditMember;
 use App\Ichidai\Grade\GradeRepository;
 use App\Ichidai\User\User;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class MemberController extends Controller
 {
@@ -70,5 +71,11 @@ class MemberController extends Controller
         $this->memberRepository->delete($member);
 
         return redirect(route('admin.members.index'));
+    }
+
+    public function memberIndex()
+    {
+        $member = Auth::user();
+        return view('front-end.member.index', compact('member'));
     }
 }

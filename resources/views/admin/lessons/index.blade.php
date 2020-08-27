@@ -24,6 +24,7 @@
                                 </td>
 
                                 <td class="project-actions">
+                                    <a href="{{ route('admin.lessons.open', $lesson) }}" class="btn btn-primary btn-sm"><i class="fa fa-qrcode"></i> Open les</a>
                                     <a href="{{ route('admin.lessons.edit', $lesson) }}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
                                 </td>
                             </tr>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Ichidai\Admin\AdminController;
+use App\Ichidai\Attendance\AttendancesController;
 use App\Ichidai\Coach\CoachesController;
 use App\Ichidai\Frontend\HomeController;
 use App\Ichidai\Grade\GradesController;
@@ -43,6 +44,7 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
             Route::get('/edit/{lesson}', [LessonsController::class, 'edit'])->name('admin.lessons.edit');
             Route::post('/edit/{lesson}', [LessonsController::class, 'update'])->name('admin.lessons.update');
             Route::get('/delete/{lesson}', [LessonsController::class, 'delete'])->name('admin.lessons.delete');
+            Route::get('/open/{lesson}', [LessonsController::class, 'open'])->name('admin.lessons.open');
         });
 
         Route::prefix('lesson-times')->group(function () {
@@ -73,5 +75,16 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
             Route::post('/edit/{member}', [MemberController::class, 'update'])->name('admin.members.update');
             Route::get('/delete/{member}', [MemberController::class, 'delete'])->name('admin.members.delete');
         });
+
+        Route::prefix('attendance')->group(function () {
+            Route::get('/register/{user}/', function() {})->name('admin.attendance.register.husk');
+            Route::get('/register/{user}/{lesson}', [AttendancesController::class, 'write'])->name('admin.attendance.register');
+        });
+    });
+});
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::prefix('lid')->group(function() {
+        Route::get('/', [MemberController::class, 'memberIndex'])->name('member.index');
     });
 });

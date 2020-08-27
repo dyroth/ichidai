@@ -61,4 +61,9 @@ class LessonsController extends Controller
 
         return redirect(route('admin.lessons.index'));
     }
+
+    public function open(Lesson $lesson)
+    {
+        return view('admin.lessons.open_lesson', compact('lesson'));
+    }
 }
