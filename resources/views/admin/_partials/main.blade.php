@@ -31,7 +31,9 @@
 
 <body class="body-small {{ config('inspinia.skin', '') }}">
 <div id="wrapper">
-    @include('admin._partials.sidebar')
+    @if(\Illuminate\Support\Facades\Auth::user()->admin)
+        @include('admin._partials.sidebar')
+    @endif
     @include('admin._partials.main-panel')
 </div>
 

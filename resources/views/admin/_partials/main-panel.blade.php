@@ -1,9 +1,12 @@
-<div id="page-wrapper" class="gray-bg">
+<div id="page-wrapper" class="gray-bg" @if(!\Illuminate\Support\Facades\Auth::user()->admin) style="margin: 0" @endif>
     <div class="row border-bottom">
         <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-            </div>
+            @if(\Illuminate\Support\Facades\Auth::user()->admin)
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+            @endif
+
             <ul class="nav navbar-top-links navbar-right">
                 <li>
                     <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">

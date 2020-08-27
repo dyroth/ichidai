@@ -15,10 +15,8 @@ class IsAdministrator
     }
     public function handle($request, Closure $next, $guard = null, $field = null)
     {
-
-        if ($this->auth->guard($guard)->user()->admin) {
-            // todo redirect to user backend
-//            return redirect(route('login'));
+        if (!$this->auth->guard($guard)->user()->admin) {
+            return redirect(route('member.index'));
         }
 
         return $next($request);

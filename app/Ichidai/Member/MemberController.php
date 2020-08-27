@@ -75,12 +75,18 @@ class MemberController extends Controller
 
     public function memberIndex()
     {
-        $data['route'] = route('admin.attendance.register.husk', ['user' => Auth::user()]);
-
-        if (env('NGROK')) {
-            $data['route'] = 'http://localhost:8080/admin/attendance/register/' . Auth::user()->id;
-        }
+        $data['title'] = 'Lidmaatschap';
+        $data['route'] = $this->getQrCodeRoute();
 
         return view('front-end.member.index', $data);
+    }
+
+    private function getQrCodeRoute()
+    {
+        if (env('NGROK')) {
+            return 'http://localhost:8080/admin/attendance/register/' . Auth::user()->id;
+        }
+
+        return route('admin.attendance.register.husk', ['user' => Auth::user()]);
     }
 }
