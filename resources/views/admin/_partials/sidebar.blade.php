@@ -13,10 +13,7 @@
           </span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        {{--                        <li><a href="">Profile</a></li>--}}
-                        {{--                        <li><a href="">Contacts</a></li>--}}
-                        {{--                        <li><a href="">Mailbox</a></li>--}}
-                        {{--                        <li class="divider"></li>--}}
+                        <li><a href="{{ route('member.index') }}">Profiel</a></li>
                         <li>
                             <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

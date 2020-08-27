@@ -105,6 +105,7 @@
                                                 <a href="#coaches">Lesgevers</a>
                                             </li>
                                         @endif
+                                        <li><a href="{{ route('login') }}">Dashboard</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -146,6 +147,7 @@
                                 @if($coaches->count() > 0)
                                     <li><a href="#coaches">Lesgevers</a></li>
                                 @endif
+                                <li><a href="{{ route('login') }}">Dashboard</a></li>
                             </ul>
                         </div>
                     </div>

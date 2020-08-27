@@ -4,8 +4,12 @@ namespace App\Ichidai\Member;
 
 
 use App\Http\Requests\CreateEditMember;
+use App\Ichidai\Attendance\Attendance;
+use App\Ichidai\Grade\Grade;
 use App\Ichidai\Grade\GradeRepository;
+use App\Ichidai\Lesson\Lesson;
 use App\Ichidai\User\User;
+use Carbon\Carbon;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -73,10 +77,14 @@ class MemberController extends Controller
         return redirect(route('admin.members.index'));
     }
 
-    public function memberIndex()
+    public function memberIndex(User $member = null)
     {
-        $data['title'] = 'Lidmaatschap';
         $data['route'] = $this->getQrCodeRoute();
+        $data['member'] = $member ?? Auth::user();
+        $data['title'] = $data['member']->name;
+        $data['memberGrades'] = Grade::where('level', '<=', $data['member']->grade->level)->get();
+        $data['lessons'] = Lesson::all();
+        $data['lessonsPerMonth'] = $this->getLessonsPerMonthFromMember($data['member']);
 
         return view('front-end.member.index', $data);
     }
@@ -88,5 +96,24 @@ class MemberController extends Controller
         }
 
         return route('admin.attendance.register.husk', ['user' => Auth::user()]);
+    }
+
+    private function getLessonsPerMonthFromMember(User $member)
+    {
+        $attendances = Attendance::where('user_id', $member->id)->where('date', '>', Carbon::now()->startOfYear())->pluck('date');
+
+        $attendances = collect($attendances)->map(function($attendance) {
+            return (int)explode('-', $attendance)[1];
+        });
+
+        $attendancePerMonth = [];
+
+        $countedValues = array_count_values($attendances->all());
+
+        for ($i = 1; $i <= Carbon::now()->month; $i++) {
+            $attendancePerMonth[] = $countedValues[$i] ?? 0;
+        }
+
+        return $attendancePerMonth;
     }
 }

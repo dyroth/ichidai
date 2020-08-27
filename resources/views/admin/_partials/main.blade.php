@@ -40,6 +40,7 @@
 <script src="{{ mix('/js/manifest.js') }}" charset="utf-8"></script>
 <script src="{{ mix('/js/vendor.js') }}" charset="utf-8"></script>
 <script src="{{ mix('/js/inspinia.js') }}" charset="utf-8"></script>
+<script src="/js/back-end/jquery-3.1.1.min.js"></script>
 @section('scripts')
 @show
 @stack('body')
