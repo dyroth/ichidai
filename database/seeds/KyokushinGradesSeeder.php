@@ -3,7 +3,7 @@
 use App\Ichidai\Grade\Grade;
 use Illuminate\Database\Seeder;
 
-class KyokushinGrades extends Seeder
+class KyokushinGradesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,8 @@ class KyokushinGrades extends Seeder
      */
     public function run()
     {
+        Grade::truncate();
+
         $records = config('style_seeds.kyokushin.grades');
 
         Grade::insert($records);

@@ -13,7 +13,7 @@
                             <div class="block-trainer-overlay">
                                 <h2>{{ $coach->name }}</h2>
                                 <p class="text-white">{{ $coach->bio }}</p>
-                                <p class="text-white">{{ $coach->grade }}</p>
+                                <p class="text-white">{{ $coach->grade->name }}</p>
                             </div>
                         </div>
                     </div>

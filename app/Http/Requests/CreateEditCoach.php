@@ -16,7 +16,7 @@ class CreateEditCoach extends FormRequest
         return [
             'name' => ['required', 'string'],
             'bio' => ['required', 'string'],
-            'grade' => ['required', 'string'],
+            'grade_id' => ['required', 'integer'],
             'photo' => 'mimes:jpeg,png,bmp,tiff |max:4096',
         ];
     }

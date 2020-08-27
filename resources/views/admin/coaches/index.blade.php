@@ -20,7 +20,7 @@
                                 <td class="project-title">
                                     <a href="{{ route('admin.coaches.edit', $coach) }}">{{ $coach->name }}</a>
                                     <br/>
-                                    <small>{{ $coach->grade }}</small>
+                                    <small>{{ $coach->grade->name }}</small>
                                 </td>
 
                                 <td class="project-actions">

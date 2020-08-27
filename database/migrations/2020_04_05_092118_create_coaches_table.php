@@ -17,7 +17,7 @@ class CreateCoachesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('bio');
-            $table->string('grade');
+            $table->foreignId('grade_id');
             $table->string('filename');
             $table->timestamps();
         });

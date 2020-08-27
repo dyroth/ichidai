@@ -17,7 +17,7 @@
                             @csrf
                             @include('admin._partials.form.input', ['label' => 'Naam', 'name' => 'name', 'value' => old('name', $coach->name ?? "")])
                             @include('admin._partials.form.text-field', ['label' => 'Bio', 'name' => 'bio', 'value' => old('bio', $coach->bio ?? "")])
-                            @include('admin._partials.form.select', ['label' => 'Graad', 'options' => config('grades'), 'name' => 'grade', 'value' => old('grade', $coach->grade ?? "")])
+                            @include('admin._partials.form.select', ['label' => 'Graad', 'options' => $grades, 'name' => 'grade_id', 'value' => old('grade_id', $coach->grade_id ?? "")])
                             @include('admin._partials.form.image', ['subject' => $coach ?? null, 'folderName' => 'coaches'])
                             @include('admin._partials.form.submit', ['route' => route('admin.coaches.index'), 'deleteRoute' => isset($coach) ? route('admin.coaches.delete', $coach) : null])
                         </form>

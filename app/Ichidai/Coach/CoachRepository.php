@@ -19,7 +19,7 @@ class CoachRepository
     {
         $coach->name = $values['name'];
         $coach->bio = $values['bio'];
-        $coach->grade = $values['grade'];
+        $coach->grade_id = $values['grade_id'];
         $coach->filename = $coach->filename ?? "";
         $coach->save();
 

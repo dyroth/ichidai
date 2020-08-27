@@ -2,6 +2,7 @@
 
 namespace App\Ichidai\Coach;
 
+use App\Ichidai\Grade\Grade;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -9,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package App
  * @property string $name
  * @property string $bio
- * @property string $grade
+ * @property integer $grade_id
  * @property string $filename
  */
 class Coach extends Model
@@ -17,6 +18,11 @@ class Coach extends Model
     protected $fillable = [
         'name',
         'bio',
-        'grade',
+        'grade_id',
     ];
+
+    public function grade()
+    {
+        return $this->belongsTo(Grade::class);
+    }
 }

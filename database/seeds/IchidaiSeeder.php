@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class KyokushinSeeder extends Seeder
+class IchidaiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,5 +12,7 @@ class KyokushinSeeder extends Seeder
     public function run()
     {
         $this->call(KyokushinGradesSeeder::class);
+        $this->call(IchidaiSettingsSeeder::class);
+        $this->call(IchidaiLessonTimesSeeder::class);
     }
 }

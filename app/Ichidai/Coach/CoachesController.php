@@ -4,6 +4,7 @@ namespace App\Ichidai\Coach;
 
 use App\Http\Requests\CreateEditCoach;
 use App\Http\Controllers\Controller;
+use App\Ichidai\Grade\Grade;
 use Illuminate\Support\Facades\Input;
 
 class CoachesController extends Controller
@@ -45,6 +46,7 @@ class CoachesController extends Controller
     {
         $data['title'] = $coach->name;
         $data['coach'] = $coach;
+        $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
 
         return view('admin.coaches.edit', $data);
     }
