@@ -75,7 +75,12 @@ class MemberController extends Controller
 
     public function memberIndex()
     {
-        $member = Auth::user();
-        return view('front-end.member.index', compact('member'));
+        $data['route'] = route('admin.attendance.register.husk', ['user' => Auth::user()]);
+
+        if (env('NGROK')) {
+            $data['route'] = 'http://localhost:8080/admin/attendance/register/' . Auth::user()->id;
+        }
+
+        return view('front-end.member.index', $data);
     }
 }
