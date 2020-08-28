@@ -18,13 +18,14 @@
                         @foreach($members as $member)
                             <tr>
                                 <td class="project-title">
-                                    <a href="{{ route('admin.members.edit', $member) }}">{{ $member->name }}</a><br>
+                                    <a href="{{ route('admin.members.view', $member) }}">{{ $member->name }}</a><br>
                                 </td>
                                 <td>
                                     {{ $member->grade->name }}
                                 </td>
 
                                 <td class="project-actions">
+                                    <a href="{{ route('admin.members.view', $member) }}" class="btn btn-outline-primary btn-sm"><i class="fa fa-pie-chart"></i> Statistieken </a>
                                     <a href="{{ route('admin.members.edit', $member) }}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
                                 </td>
                             </tr>

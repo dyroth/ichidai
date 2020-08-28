@@ -74,6 +74,7 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
             Route::get('/edit/{member}', [MemberController::class, 'edit'])->name('admin.members.edit');
             Route::post('/edit/{member}', [MemberController::class, 'update'])->name('admin.members.update');
             Route::get('/delete/{member}', [MemberController::class, 'delete'])->name('admin.members.delete');
+            Route::get('/{member}', [MemberController::class, 'view'])->name('admin.members.view');
         });
 
         Route::prefix('attendance')->group(function () {

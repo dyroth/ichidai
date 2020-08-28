@@ -19,7 +19,7 @@ class HomeController extends Controller
         $lessons = Lesson::all();
         $lessonTimes = LessonTime::all();
 
-        $theme = Setting::where(['name' => 'active_theme'])->first()->properties ?? 'iron-muscle';
+        $theme = Setting::where(['name' => 'active_theme'])->first()->properties ?? 'fitnezz';
 
         return view('front-end.' . $theme . '.index', compact('intro', 'coaches', 'lessons', 'lessonTimes', 'generalInfo'));
     }

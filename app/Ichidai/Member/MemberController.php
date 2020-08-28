@@ -89,6 +89,11 @@ class MemberController extends Controller
         return view('front-end.member.index', $data);
     }
 
+    public function view(User $member)
+    {
+        return $this->memberIndex($member);
+    }
+
     private function getQrCodeRoute()
     {
         if (env('NGROK')) {

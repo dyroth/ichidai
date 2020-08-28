@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ichi Dai - Kyokushin</title>
+    <title>{{ $generalInfo->general->name ?? "Sportclub" }} - {{ $generalInfo->general->martial_art_style ?? $generalInfo->general->martial_art ?? 'Gevechtsport' }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="/img/favicon.png">
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
-    <link rel="stylesheet" href="/css/front-end/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/front-end/magnific-popup.css">
-    <link rel="stylesheet" href="/css/front-end/jquery-ui.css">
-    <link rel="stylesheet" href="/css/front-end/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/front-end/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/front-end/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/css/front-end/animate.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/magnific-popup.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/jquery-ui.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/animate.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="/css/front-end/aos.css">
-    <link rel="stylesheet" href="/css/front-end/theme.css">
-    <link rel="stylesheet" href="/css/front-end/stylesheet.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/aos.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/stylesheet.css">
 
 </head>
 <body>
@@ -205,19 +204,19 @@
     </footer>
 </div>
 
-<script src="/js/front-end/jquery-3.3.1.min.js"></script>
-<script src="/js/front-end/jquery-migrate-3.0.1.min.js"></script>
-<script src="/js/front-end/jquery-ui.js"></script>
-<script src="/js/front-end/popper.min.js"></script>
-<script src="/js/front-end/bootstrap.min.js"></script>
-<script src="/js/front-end/owl.carousel.min.js"></script>
-<script src="/js/front-end/jquery.stellar.min.js"></script>
-<script src="/js/front-end/jquery.countdown.min.js"></script>
-<script src="/js/front-end/jquery.magnific-popup.min.js"></script>
-<script src="/js/front-end/bootstrap-datepicker.min.js"></script>
-<script src="/js/front-end/aos.js"></script>
+<script src="/js/front-end/iron-muscle/jquery-3.3.1.min.js"></script>
+<script src="/js/front-end/iron-muscle/jquery-migrate-3.0.1.min.js"></script>
+<script src="/js/front-end/iron-muscle/jquery-ui.js"></script>
+<script src="/js/front-end/iron-muscle/popper.min.js"></script>
+<script src="/js/front-end/iron-muscle/bootstrap.min.js"></script>
+<script src="/js/front-end/iron-muscle/owl.carousel.min.js"></script>
+<script src="/js/front-end/iron-muscle/jquery.stellar.min.js"></script>
+<script src="/js/front-end/iron-muscle/jquery.countdown.min.js"></script>
+<script src="/js/front-end/iron-muscle/jquery.magnific-popup.min.js"></script>
+<script src="/js/front-end/iron-muscle/bootstrap-datepicker.min.js"></script>
+<script src="/js/front-end/iron-muscle/aos.js"></script>
 
-<script src="/js/front-end/main.js"></script>
+<script src="/js/front-end/iron-muscle/main.js"></script>
 
 </body>
 </html>
