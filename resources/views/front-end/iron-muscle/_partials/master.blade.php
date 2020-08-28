@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="/css/front-end/iron-muscle/aos.css">
+    <link rel="stylesheet" href="/css/front-end/iron-muscle/theme.css">
     <link rel="stylesheet" href="/css/front-end/iron-muscle/stylesheet.css">
 
 </head>

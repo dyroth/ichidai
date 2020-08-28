@@ -9,6 +9,7 @@ class GeneralInfoHelper
     public function getFormattedGeneralInfoHelperArray(array $all)
     {
         return [
+            'theme' => $all['theme'],
             'general' => [
                 'name' => $all['name'],
                 'martial_art' => $all['martial_art'],
@@ -39,6 +40,7 @@ class GeneralInfoHelper
     public function getEmptyGeneralInfoHelperArray()
     {
         return [
+            'theme' => '',
             'general' => [
                 'name' => '',
                 'martial_art' => '',

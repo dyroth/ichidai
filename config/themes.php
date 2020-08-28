@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'iron-muscle',
-    'fitnezz'
+    'iron-muscle' => 'Iron Muscle',
+    'fitnezz' => 'Fitnezz',
 ];

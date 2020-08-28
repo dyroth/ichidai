@@ -6,6 +6,22 @@
         <form class="form-horizontal" method="POST" enctype="multipart/form-data"
               action="{{ route('admin.general_info.update') }}">
             @csrf
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Thema</h5>
+                        </div>
+
+                        <div class="ibox-content">
+                            @include('admin._partials.form.select', ['label' => 'Actief thema', 'name' => 'theme', 'options' => config('themes'), 'value' => old('theme', $generalInfo->theme ?? "")])
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
