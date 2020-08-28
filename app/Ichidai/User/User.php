@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
         'grade_id',
         'birthdate',
+        'subscription_until',
     ];
 
     /**
@@ -41,7 +42,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'subscription_until' => 'datetime',
+        'subscription_until' => CastToEuDate::class,
         'birthdate' => CastToEuDate::class,
     ];
 

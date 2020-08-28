@@ -18,7 +18,7 @@ class ExpandUsersTable extends Migration
             $table->foreignId('grade_id')->default(1)->after('email');
             $table->date('birthdate')->nullable()->after('grade_id');
             $table->string('weight')->nullable()->after('birthdate');
-            $table->dateTime('subscription_until')->nullable()->after('weight');
+            $table->date('subscription_until')->nullable()->after('weight');
             $table->boolean('warning_mail_sent')->default(false)->after('subscription_until');
         });
     }

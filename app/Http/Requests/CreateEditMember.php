@@ -19,6 +19,7 @@ class CreateEditMember extends FormRequest
             'email' => ['required', 'string', 'unique:users,email,'.$this->request->get('member_id')],
             'grade_id' => ['required', 'string'],
             'birthdate' => ['nullable', 'date_format:d/m/Y'],
+            'subscription_until' => ['nullable', 'date_format:d/m/Y'],
         ];
     }
 }

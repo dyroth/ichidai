@@ -31,6 +31,7 @@ class MemberRepository
         }
 
         $all['birthdate'] = Carbon::createFromFormat('d/m/Y', $all['birthdate']);
+        $all['subscription_until'] = Carbon::createFromFormat('d/m/Y', $all['subscription_until']);
 
         $member->fill($all);
         $member->save();

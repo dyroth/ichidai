@@ -5,7 +5,7 @@
     <div class="ibox-content">
         <div class="row">
             <div class="col md 12">
-                <canvas id="lineChart" height="70"></canvas>
+                <canvas id="lineChart" height="80"></canvas>
             </div>
         </div>
     </div>

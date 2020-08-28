@@ -11,7 +11,7 @@
             @include('front-end.member.modules.subscription')
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12">
                 @include('front-end.member.modules.training_graph')
         </div>
     </div>
