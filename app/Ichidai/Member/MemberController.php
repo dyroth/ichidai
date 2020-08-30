@@ -56,7 +56,7 @@ class MemberController extends Controller
 
     public function edit(User $member)
     {
-        $data['title'] = $member->name;
+        $data['title'] = "Leden";
         $data['member'] = $member;
         $data['grades'] = $this->gradeRepository->getSelectOptions();
 
@@ -96,10 +96,6 @@ class MemberController extends Controller
 
     private function getQrCodeRoute()
     {
-        if (env('NGROK')) {
-            return 'http://localhost:8080/admin/attendance/register/' . Auth::user()->id;
-        }
-
         return route('admin.attendance.register.husk', ['user' => Auth::user()]);
     }
 

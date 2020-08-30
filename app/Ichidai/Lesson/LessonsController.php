@@ -42,7 +42,7 @@ class LessonsController extends Controller
 
     public function edit(Lesson $lesson)
     {
-        $data['title'] = $lesson->name;
+        $data['title'] = "Lessen";
         $data['lesson'] = $lesson;
 
         return view('admin.lessons.edit', $data);

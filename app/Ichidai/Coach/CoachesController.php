@@ -31,6 +31,7 @@ class CoachesController extends Controller
     public function create()
     {
         $data['title'] = "Lesgevers";
+        $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
 
         return view('admin.coaches.edit', $data);
     }
@@ -44,7 +45,7 @@ class CoachesController extends Controller
 
     public function edit(Coach $coach)
     {
-        $data['title'] = $coach->name;
+        $data['title'] = "Lesgevers";
         $data['coach'] = $coach;
         $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
 

@@ -42,7 +42,7 @@ class GradesController extends Controller
 
     public function edit(Grade $grade)
     {
-        $data['title'] = $grade->name;
+        $data['title'] = "Graden";
         $data['grade'] = $grade;
 
         return view('admin.grades.edit', $data);
