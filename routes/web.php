@@ -17,8 +17,6 @@ Auth::routes([
     'verify' => false,
 ]);
 
-dd(Modules::membersEnabled());
-
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
