@@ -10,6 +10,8 @@ class Modules
 {
     public static function membersEnabled(): bool
     {
-        return Setting::getSetting('members_enabled')->enabled;
+        $membersEnabled = Setting::getSetting('members_enabled');
+
+        return $membersEnabled ? $membersEnabled->enabled : false;
     }
 }

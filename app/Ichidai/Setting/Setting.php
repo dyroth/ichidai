@@ -21,8 +21,8 @@ class Setting extends Model
         'properties' => 'object'
     ];
 
-    public static function getSetting(string $name): object
+    public static function getSetting(string $name): ?object
     {
-        return Setting::where('name', $name)->first()->properties;
+        return Setting::where('name', $name)->first()->properties ?? null;
     }
 }
