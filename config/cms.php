@@ -28,5 +28,9 @@ return [
                 'route' => 'admin.lesson_times.index',
                 'icon' => 'fa fa-clock-o',
             ],
+        'Graden' => [
+            'route' => 'admin.grades.index',
+            'icon' => 'fa fa-star',
+        ],
     ]
 ];

@@ -105,7 +105,9 @@
                                                 <a href="#coaches">Lesgevers</a>
                                             </li>
                                         @endif
-                                        <li><a href="{{ route('login') }}">Dashboard</a></li>
+                                        @if(\App\Ichidai\Setting\Helpers\Modules::membersEnabled())
+                                            <li><a href="{{ route('login') }}">Dashboard</a></li>
+                                        @endif
                                     </ul>
                                 </div>
                             </nav>

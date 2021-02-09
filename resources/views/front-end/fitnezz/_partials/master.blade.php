@@ -55,11 +55,13 @@
                     @endif
                 </ul>
 
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item cta-btn">
-                        <a class="nav-link" href="{{ route('member.index') }}">Dashboard</a>
-                    </li>
-                </ul>
+                @if(\App\Ichidai\Setting\Helpers\Modules::membersEnabled())
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item cta-btn">
+                            <a class="nav-link" href="{{ route('member.index') }}">Dashboard</a>
+                        </li>
+                    </ul>
+                @endif
 
             </div>
         </div>

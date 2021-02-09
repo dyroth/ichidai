@@ -5,6 +5,7 @@ namespace App\Ichidai\Coach;
 use App\Http\Requests\CreateEditCoach;
 use App\Http\Controllers\Controller;
 use App\Ichidai\Grade\Grade;
+use App\Ichidai\Setting\Helpers\Modules;
 use Illuminate\Support\Facades\Input;
 
 class CoachesController extends Controller
@@ -31,7 +32,11 @@ class CoachesController extends Controller
     public function create()
     {
         $data['title'] = "Lesgevers";
-        $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
+        $data['grades'] = config('grades');
+
+        if (Modules::membersEnabled()) {
+            $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
+        }
 
         return view('admin.coaches.edit', $data);
     }
@@ -47,7 +52,11 @@ class CoachesController extends Controller
     {
         $data['title'] = "Lesgevers";
         $data['coach'] = $coach;
-        $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
+        $data['grades'] = config('grades');
+
+        if (Modules::membersEnabled()) {
+            $data['grades'] = Grade::all()->sortBy('level')->pluck('name', 'id');
+        }
 
         return view('admin.coaches.edit', $data);
     }

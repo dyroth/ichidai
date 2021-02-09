@@ -20,4 +20,9 @@ class Setting extends Model
     protected $casts = [
         'properties' => 'object'
     ];
+
+    public static function getSetting(string $name): object
+    {
+        return Setting::where('name', $name)->first()->properties;
+    }
 }
