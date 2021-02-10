@@ -4,16 +4,25 @@ html {
 
 #main-title-container {
     background-image: url('/img/spring-camp.jpg');
-    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
+    min-width: 100%;
     height: 850px;
 }
 
+@supports ( -webkit-touch-callout : none) {
+    #main-title-container {
+        background-attachment:scroll
+    }
+}
 
+@supports not ( -webkit-touch-callout : none) {
+    #main-title-container {
+        background-attachment: fixed;
+    }
+}
 
 #main-title {
     color: #fff;
