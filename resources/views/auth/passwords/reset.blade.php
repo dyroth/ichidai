@@ -13,7 +13,7 @@
               {{ csrf_field() }}
               <input type="hidden" name="token" value="{{ $token }}">
               <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" placeholder="Email address" required>
+                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email address" required>
                 @if ($errors->has('email'))
                     <span class="help-block">
                         <strong>{{ $errors->first('email') }}</strong>
