@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'maandag',
-    'dinsdag',
-    'woensdag',
-    'donderdag',
-    'vrijdag',
-    'zaterdag',
-    'zondag',
+    'maandag' => 'Maandag',
+    'dinsdag' => 'Dinsdag',
+    'woensdag' => 'Woensdag',
+    'donderdag' => 'Donderdag',
+    'vrijdag' => 'Vrijdag',
+    'zaterdag' => 'Zaterdag',
+    'zondag' => 'Zondag',
 ];
