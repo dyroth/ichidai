@@ -29,6 +29,7 @@ class LessonTimesController extends Controller
     public function create()
     {
         $data['title'] = "Lestijden";
+        $data['weekdays'] = $this->createSelectArrayForWeekdays();
 
         return view('admin.lesson_times.edit', $data);
     }
@@ -44,6 +45,7 @@ class LessonTimesController extends Controller
     {
         $data['title'] = "Lestijden";
         $data['lessonTime'] = $lessonTime;
+        $data['weekdays'] = $this->createSelectArrayForWeekdays();
 
         return view('admin.lesson_times.edit', $data);
     }
@@ -60,5 +62,16 @@ class LessonTimesController extends Controller
         $this->lessonTimeRepository->delete($lessonTime);
 
         return redirect(route('admin.lesson_times.index'));
+    }
+
+    private function createSelectArrayForWeekdays()
+    {
+        $array = [];
+
+        foreach (config('weekdays') as $weekday) {
+            $array[strtolower($weekday)] = ucfirst($weekday);
+        }
+
+        return $array;
     }
 }

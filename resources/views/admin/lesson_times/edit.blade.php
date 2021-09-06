@@ -16,7 +16,7 @@
                               action="{{ isset($lessonTime) ? route('admin.lesson_times.update', $lessonTime) : route('admin.lesson_times.write') }}">
                             @csrf
                             @include('admin._partials.form.input', ['label' => 'Les naam', 'name' => 'name', 'value' => old('name', $lessonTime->name ?? "")])
-                            @include('admin._partials.form.select', ['label' => 'Dag', 'options' => config('weekdays'), 'name' => 'day', 'value' => old('day', $lessonTime->day ?? "")])
+                            @include('admin._partials.form.select', ['label' => 'Dag', 'options' => $weekdays, 'name' => 'day', 'value' => old('day', $lessonTime->day ?? "")])
                             @include('admin._partials.form.input', ['label' => 'Doelgroep', 'name' => 'group', 'value' => old('group', $lessonTime->group ?? "")])
                             @include('admin._partials.form.input', ['label' => 'Locatie', 'name' => 'location', 'value' => old('location', $lessonTime->location ?? "")])
                             @include('admin._partials.form.timeslots', ['label' => 'Lestijden', 'nameFrom' => 'starting_time', 'nameTo' => 'ending_time', 'valueFrom' => old('starting_time', $lessonTime->starting_time ?? ""), 'valueTo' => old('ending_time', $lessonTime->ending_time ?? "")])
