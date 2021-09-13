@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ $generalInfo->general->name ?? "Sportclub" }} - {{ $generalInfo->general->martial_art_style ?? $generalInfo->general->martial_art ?? 'Gevechtsport' }}</title>
+    <title>{{ $generalInfo->general->name ?? "Sportclub" }}
+        - {{ $generalInfo->general->martial_art_style ?? $generalInfo->general->martial_art ?? 'Gevechtsport' }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="/img/favicon.png">
@@ -49,16 +50,18 @@
                         <div class="d-flex ml-auto">
                             @if(isset($generalInfo))
                                 @if($generalInfo->contact_info->email)
-                                <span class="d-flex align-items-center ml-auto mr-4" style="color: #fff">
+                                    <span class="d-flex align-items-center ml-auto mr-4" style="color: #fff">
                                     <span class="icon-envelope mr-2"></span>
-                                    <span class="d-none d-md-inline-block">{{ $generalInfo->contact_info->email }}</span>
+                                    <span
+                                        class="d-none d-md-inline-block">{{ $generalInfo->contact_info->email }}</span>
                                 </span>
                                 @endif
 
                                 @if($generalInfo->contact_info->phone)
-                                <span class="d-flex align-items-center" style="color: #fff">
+                                    <span class="d-flex align-items-center" style="color: #fff">
                                     <span class="icon-phone mr-2"></span>
-                                    <span class="d-none d-md-inline-block">{{ $generalInfo->contact_info->phone }}</span>
+                                    <span
+                                        class="d-none d-md-inline-block">{{ $generalInfo->contact_info->phone }}</span>
                                 </span>
                                 @endif
                             @endif
@@ -108,6 +111,8 @@
                                         @if(\App\Ichidai\Setting\Helpers\Modules::membersEnabled())
                                             <li><a href="{{ route('login') }}">Dashboard</a></li>
                                         @endif
+                                        <li><a href="https://members.martialytics.com/" target="_blank">Martialytics</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
@@ -124,7 +129,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <div class="row">
                         <div class="col-6 col-md-4 col-lg-8 mb-5 mb-lg-0">
                             @if(isset($generalInfo->footer_text->footer_title))
@@ -154,27 +159,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-2">
                     <div class="row mb-5">
                         <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Contact Info</h3></div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <a href="{{ $generalInfo->contact_info->google_maps_url ?? "#" }}">
-                                <p style="text-decoration: underline">{{ $generalInfo->contact_info->street_and_number ?? "" }} <br> {{ $generalInfo->contact_info->postal_code ?? "" }} {{ $generalInfo->contact_info->city ?? "" }}</p>
+                                <p style="text-decoration: underline">{{ $generalInfo->contact_info->street_and_number ?? "" }}
+                                    <br> {{ $generalInfo->contact_info->postal_code ?? "" }} {{ $generalInfo->contact_info->city ?? "" }}
+                                </p>
                             </a>
-                        </div>
-                        <div class="col-md-6">
+                            <span style="color: #000;">
                             @if(isset($generalInfo))
-                                @if($generalInfo->contact_info->phone)
-                                    Tel. {{ $generalInfo->contact_info->phone }}
+                                    @if($generalInfo->contact_info->phone)
+                                        Tel. {{ $generalInfo->contact_info->phone }}
+                                    @endif
+                                    @if($generalInfo->contact_info->email)
+                                        <br>
+                                        Mail. {{ $generalInfo->contact_info->email }}
+                                    @endif
                                 @endif
-                                @if($generalInfo->contact_info->email)
-                                    <br>
-                                    Mail. {{ $generalInfo->contact_info->email }}
-                                @endif
-                            @endif
+                            </span>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Sociale Media</h3></div>
                         <div class="col-md-12">
@@ -200,6 +206,12 @@
                                 @endif
                             </p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="col-md-12"><h3 class="footer-heading mb-4 text-primary">Inschrijven gratis les</h3></div>
+                    <div class="col-md-12">
+                        @include('front-end.iron-muscle.modules.leads')
                     </div>
                 </div>
             </div>
