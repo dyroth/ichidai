@@ -5,6 +5,7 @@ use App\Ichidai\Attendance\AttendancesController;
 use App\Ichidai\Coach\CoachesController;
 use App\Ichidai\Frontend\HomeController;
 use App\Ichidai\Grade\GradesController;
+use App\Ichidai\Leads\LeadsController;
 use App\Ichidai\Lesson\LessonsController;
 use App\Ichidai\LessonTime\LessonTimesController;
 use App\Ichidai\Member\MemberController;
@@ -18,6 +19,7 @@ Auth::routes([
 ]);
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::post('/leads', [LeadsController::class, 'submitForm'])->name('leads');
 
 Route::group(['middleware' => ['auth', 'admin']], function() {
     Route::prefix('admin')->group(function () {

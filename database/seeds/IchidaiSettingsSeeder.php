@@ -30,6 +30,7 @@ class IchidaiSettingsSeeder extends Seeder
                     'city' => "Antwerpen",
                     'country' => "België",
                     'google_maps_url' => "https://goo.gl/maps/GXRiv",
+                    //BE51 7310 0497 5162
                 ],
                 'social_media' => [
                     'facebook' => "https://www.facebook.com/ichidaidojo/",
